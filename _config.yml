@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "Jad Tabbouch"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/images/me.jpg"
   bio              : "I am an **amazing** person."
   location         : "Paris, France"
   email            :
