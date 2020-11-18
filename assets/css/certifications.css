@@ -15,6 +15,7 @@ article img {
 }
 
 .markdown-body article p {
+	margin: 0 1.3em; 
 }
 
 .release-date {
