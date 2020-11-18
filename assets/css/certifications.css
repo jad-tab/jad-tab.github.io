@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+article {
+	
+  padding: 20px;
+}
 
 article img {
   width: 220px;
@@ -9,7 +13,6 @@ article img {
 }
 
 .markdown-body article p {
-  margin-bottom: 30;
 }
 
 .release-date {
