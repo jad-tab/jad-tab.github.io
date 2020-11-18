@@ -3,7 +3,7 @@ title: "Certifications"
 permalink: /certifications/
 header: 
  image: "/images/banner.jpg"
-css: certs.css
+custom_css: certs.css
 ---
 
 
