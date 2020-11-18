@@ -10,7 +10,7 @@ article {
 article img {
   width: 220px;
   height: 220px;
-  padding: 8px;
+  padding-bottom: 8px;
 }
 
 .markdown-body article p {
