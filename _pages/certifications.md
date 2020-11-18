@@ -1,13 +1,11 @@
 ---
 title: "Certifications"
-css: certs.css
+custom_css: certs.css
 permalink: /certifications/
 header: 
  image: "/images/banner.jpg"
 ---
 
-
-## Certifications
 {% for album in site.data.certifications %}
   <article>
     <a href="{{ album.url }}">
