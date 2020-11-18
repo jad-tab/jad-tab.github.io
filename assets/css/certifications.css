@@ -10,11 +10,11 @@ article {
 article img {
   width: 220px;
   height: 220px;
-  padding-bottom: 8px;
+  padding: 8px;
 }
 
 .markdown-body article p {
-margin-bottom: 0;
+margin-bottom: 30px;
 }
 
 .release-date {
