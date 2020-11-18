@@ -1,10 +1,15 @@
-- title: Machine Learning on Coursera
-  platform: A very thorough course in Machine Learning by Andrew Ng in which I learned a lot about various ML techniques.
+- title: Machine Learning by Coursera
+  platform: A very complete, thorough course in which I have learned so much. Most machine learning concepts are addressed in this one!
   img: "/images/mlc.png"
   url: https://www.coursera.org/learn/machine-learning
 
-- title: ML Supervisedndifh n2
-  platform: Coursera idhdi
-  img: https://i.scdn.co/image/5a6a1c6514398dc4004c6348a83d77694a3883d4
-  url: https://open.spotify.com/album/30Perjew8HyGkdSmqguYyg
+- title: Unsupervised Learning on Python by DataCamp
+  platform: A course that covers all the basics of unsupervised learning. I have learned to cluster data and to make use of the PCA and also of the powerful t-SNE algorithm !
+  img: "/images/unsupervised.jpg"
+  url: https://learn.datacamp.com/courses/unsupervised-learning-in-python
   
+  
+- title: Supervised Learning on Python by DataCamp
+  platform: A course that covers all the basics of supervised learning through Scikit-learn: building a ML pipeline for preprocessed datasets.
+  img: "/images/supervised.jpg"
+  url: https://learn.datacamp.com/courses/unsupervised-learning-in-python
