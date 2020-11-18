@@ -3,10 +3,12 @@
 }
 
 article {
-  padding: 8px;
+  padding-top: 10px;
+  padding-bottom: 20px;
   overflow: hidden;
   font-size: 70%;
-  border-style: solide;
+  border-bottom: 1px solid red;
+  
 }
 
 
