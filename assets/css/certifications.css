@@ -4,10 +4,7 @@
 
 article {
   display: inline-block;
-  width: 320px;
-  height: 420px;
   padding: 8px;
-  overflow: hidden;
 }
 
 article img {
