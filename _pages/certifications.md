@@ -1,5 +1,4 @@
 ---
-layout: single
 title: "Certifications"
 custom_css: certifications
 permalink: /certifications/
