@@ -1,6 +1,9 @@
-* {}
+}
 
-article {height: 100%;
+article {
+  display: inline;
+  padding: 8px;
+  overflow: hidden;
 }
 
 article img {
