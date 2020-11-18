@@ -5,8 +5,6 @@ header:
  image: "/images/banner.jpg"
 ---
 
-<link rel="stylesheet" href="cert.css" />
-
 
 ## Certifications
 {% for album in site.data.certifications %}
