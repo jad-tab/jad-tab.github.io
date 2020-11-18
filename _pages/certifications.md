@@ -3,6 +3,7 @@ title: "Certifications"
 permalink: /certifications/
 header: 
  image: "/images/banner.jpg"
+ layout: certs
 ---
 
 
@@ -19,3 +20,4 @@ header:
     {% endif %}
   </article>
 {% endfor %}
+
