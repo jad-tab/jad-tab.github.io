@@ -8,6 +8,7 @@ header:
 ---
 
 ## List of certifications
+### I hereby include some certifications I have earned recently. It's always nice to learn something new !
 {% for album in site.data.certifications %}
   <article>
     <a href="{{ album.url }}">
