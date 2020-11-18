@@ -13,7 +13,8 @@ header:
     <a href="{{ album.url }}">
       <img src="{{ album.img }}" alt="{{ album.title }} {{ album.platform }}"/> 
       <p>{{ album.title }}
-    on {{ album.platform }}</a>{{ album.description }} </p>  </p>
+    on {{ album.platform }}</a>
+	{{ album.description }} </p>
     {% if release-date %}
       <span class="release-date">{{ album.release_date | date: "%b %-d, %Y" }}</span>
     {% endif %}
