@@ -6,6 +6,7 @@ header:
  image: "/images/banner.jpg"
 ---
 
+## List of certifications
 {% for album in site.data.certifications %}
   <article>
     <a href="{{ album.url }}">
