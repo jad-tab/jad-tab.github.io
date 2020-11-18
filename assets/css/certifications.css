@@ -1,9 +1,7 @@
 * {
-  box-sizing: border-box;
 }
 
 article {
-  display: inline-block;
   padding: 8px;
 }
 
