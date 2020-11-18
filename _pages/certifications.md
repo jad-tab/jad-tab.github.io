@@ -7,7 +7,7 @@ header:
  image: "/images/banner.jpg"
 ---
 
-## List of certifications
+## List of certifications I have earned recently:
 
 {% for album in site.data.certifications %}
   <article>

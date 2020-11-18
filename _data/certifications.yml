@@ -9,7 +9,21 @@
   url: https://learn.datacamp.com/courses/unsupervised-learning-in-python
   
   
-- title: Supervised Learning on Python by DataCamp
+- title: Supervised Learning with Scikit-Learn (DataCamp)
   platform: A course that covers all the basics of supervised learning through Scikit-learn: building a ML pipeline for preprocessed datasets.
   img: "/images/supervised.jpg"
   url: https://learn.datacamp.com/courses/supervised-learning-with-scikit-learn
+  
+  
+- title: Supervised Learning with Scikit-Learn (DataCamp)
+  platform: A course that covers all the basics of supervised learning through Scikit-learn: building a ML pipeline for preprocessed datasets.
+  img: "/images/supervised.jpg"
+  url: https://learn.datacamp.com/courses/supervised-learning-with-scikit-learn
+  
+  
+- title: AI for Medical Diagnosis (Coursera)
+  platform: AI for Medical diagnosis - A course in which I learned to build convolutional neural network image classification and segmentation models. An interesting and useful application of AI to (hopefully) save lives !
+  img: "/images/c1.jpg"
+  url: https://www.coursera.org/learn/ai-for-medical-diagnosis
+  
+ 
