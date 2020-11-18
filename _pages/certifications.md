@@ -1,11 +1,11 @@
-<link rel="stylesheet" href="cert.css" />
-
 ---
 title: "Certifications"
 permalink: /certifications/
 header: 
  image: "/images/banner.jpg"
 ---
+
+<link rel="stylesheet" href="cert.css" />
 
 
 ## Certifications
