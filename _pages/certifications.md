@@ -1,10 +1,9 @@
 ---
-layout: page
 title: "Certifications"
+custom_css: certs.css
 permalink: /certifications/
 header: 
  image: "/images/banner.jpg"
-custom_css: certs.css
 ---
 
 
