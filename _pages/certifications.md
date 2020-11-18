@@ -1,5 +1,6 @@
 ---
 title: "Certifications"
+css: certifications
 permalink: /certifications/
 header: 
  image: "/images/banner.jpg"
