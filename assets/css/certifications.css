@@ -1,5 +1,5 @@
 * {
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
 article {
@@ -7,7 +7,6 @@ article {
   width: 320px;
   height: 420px;
   padding: 8px;
-  overflow: hidden;
 }
 
 article img {
