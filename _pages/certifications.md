@@ -5,4 +5,4 @@ header:
  image: "/images/banner.jpg"
 ---
 
-Certificates earned
+
