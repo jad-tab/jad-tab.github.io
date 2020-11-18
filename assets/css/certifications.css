@@ -3,19 +3,18 @@
 }
 
 article {
-	
-  font-size: 70%;
+  padding: 8px;
+  overflow: hidden;
+  font-size: 20pt;
 }
 
 article img {
   width: 220px;
   height: 220px;
-  padding: 20px;
-  float: left;
 }
 
 .markdown-body article p {
-margin-bottom: 30px;
+  margin-bottom: 0;
 }
 
 .release-date {
