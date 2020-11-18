@@ -11,9 +11,8 @@ header:
 {% for album in site.data.certifications %}
   <article>
     <a href="{{ album.url }}">
-      <img src="{{ album.img }}" alt="{{ album.title }} {{ album.platform }}"/>
+      <img src="{{ album.img }}" alt="{{ album.title }} {{ album.platform }}"/> </a>
       <p>{{ album.title }}
-    </a>
     on {{ album.platform }}</p>
     {% if release-date %}
       <span class="release-date">{{ album.release_date | date: "%b %-d, %Y" }}</span>
