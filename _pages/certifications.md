@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="cert.css" />
+
 ---
 title: "Certifications"
 permalink: /certifications/
