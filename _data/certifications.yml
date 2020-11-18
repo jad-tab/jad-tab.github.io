@@ -12,4 +12,4 @@
 - title: Supervised Learning on Python by DataCamp
   platform: A course that covers all the basics of supervised learning through Scikit-learn: building a ML pipeline for preprocessed datasets.
   img: "/images/supervised.jpg"
-  url: https://learn.datacamp.com/courses/unsupervised-learning-in-python
+  url: https://learn.datacamp.com/courses/supervised-learning-with-scikit-learn
