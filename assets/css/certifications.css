@@ -13,6 +13,7 @@ article img {
 }
 
 .markdown-body article p {
+margin-bottom: 0;
 }
 
 .release-date {
