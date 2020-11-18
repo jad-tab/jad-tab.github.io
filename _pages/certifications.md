@@ -1,6 +1,6 @@
 ---
 title: "Certifications"
-css: certifications
+custom_css: certifications
 permalink: /certifications/
 header: 
  image: "/images/banner.jpg"
