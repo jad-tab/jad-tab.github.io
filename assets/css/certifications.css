@@ -2,12 +2,6 @@
   box-sizing: border-box;
 }
 
-article {
-  display: inline-block;
-  width: 320px;
-  height: 420px;
-  padding: 8px;
-}
 
 article img {
   width: 320px;
