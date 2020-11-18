@@ -11,5 +11,6 @@ header:
 ## Certifications
 
 {% for album in site.data.certifications %}
-- [{{ certifications.title }} by {{ certifications.platform }}]({{ certifications.url }})
+- [{% for certification in site.data.certifications %}
+- [{{ certifications.title }} by {{ certifications.platform }}]({{ album.url }})
 {% endfor %}
