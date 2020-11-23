@@ -3,12 +3,12 @@
   img: "/images/mlc.png"
   url: "https://www.coursera.org/learn/machine-learning"
   
-  - title: "Unsupervised Learning on Python by DataCamp"
+- title: "Unsupervised Learning on Python by DataCamp"
   platform: "A course that covers all the basics of unsupervised learning. I have learned to cluster data and to make use of the PCA and also of the powerful t-SNE algorithm !"
   img: "/images/unsupervised.jpg"
   url: "https://learn.datacamp.com/courses/unsupervised-learning-in-python"
   
-  - title: "AI for Medical Diagnosis (Coursera)"
+- title: "AI for Medical Diagnosis (Coursera)"
   platform: "AI for Medical diagnosis - A course in which I learned to build convolutional neural network image classification and segmentation models. An interesting and useful application of AI to (hopefully) save lives !"
   img: "/images/c1.JPG"
   url: https://www.coursera.org/learn/ai-for-medical-diagnosis
