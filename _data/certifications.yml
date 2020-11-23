@@ -19,3 +19,8 @@
   img: "/images/supervised.jpg"
   url: https://learn.datacamp.com/courses/supervised-learning-with-scikit-learn
    
+    
+ - title: "Introduction to DeepLearning on Pytorch (DataCamp)"
+  platform: "Using the (overused) MNIST dataset, I have learned to build basic (feedforward) neural networks and then I saw how convolutional neural networks could be used to build  more accurate models. Finer concepts are also addressed in the final chapter: regularization techniques, transfer learning."
+  img: "/images/pytorch.jpg"
+  url: https://learn.datacamp.com/courses/introduction-to-deep-learning-with-pytorch
