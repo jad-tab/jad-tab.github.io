@@ -3,8 +3,8 @@ layout: archive
 permalink: /machine-learning/
 title: "Machine Learning Posts by Tags"
 author_profile: true
-header:
- image: "/images/pytorch.jpg"
+header: 
+ image: "/images/banner.jpg"
 ---
 
 {% include base_path %}
