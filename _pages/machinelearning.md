@@ -7,6 +7,8 @@ header:
  image: "/images/banner.jpg"
 ---
 
+Here's a list of the projects
+
 {% include base_path %}
 {% include group-by-array collection=site.posts field="tags" %}
 
