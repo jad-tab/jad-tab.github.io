@@ -95,8 +95,8 @@ analytics:
 author:
   name             : "Jad Tabbouch"
   avatar           : "/images/me.jpg"
-  bio              : "Mathematics graduate MSc and Machine Learning enthusiast"
-  location         : "France"
+  bio              : "Mathematics graduate and Machine Learning enthusiast"
+  location         : "Nice, France"
   email            :
   links:
     - label: "Email"
