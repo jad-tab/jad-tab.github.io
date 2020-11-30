@@ -6,11 +6,12 @@ header:
 ---
 
 
-My name is Jad. I was born in Beirut, Lebanon before moving to France in 2013. 
+I was born in Beirut, Lebanon, not far from here:
 
 
 ![alt]({{ site.url }}{{ site.baseurl }}/images/beirut.jpg)
 
+I moved to France in 2013 to pursue my education. 
 
 I have a love and passion for mathematics and their applications. I hold a Master's degree in Pure and Applied Mathematics as well as a Master's degree in Data Science and Machine Learning.
 
