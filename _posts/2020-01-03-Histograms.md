@@ -25,7 +25,7 @@ We would like to estimate $$p$$ using a histogram. The histogram of $$p$$ based 
 	
 $$\hat{p}_{\mathcal{I}}(x) = \sum_{I \in \mathcal{I}} \frac{N_I}{n \lambda(I)} \mathds{1}_{I}(x)$$ 
 
-where $$N_I$$ is 'number' of data which fall into $$I$$, more precisely: $$N_I = \sum_{i=1}^n \mathds{1}_{X_i \in I}$$. Since we have chosen a regular partition, we have in particular, for all $$I \in \mathcal{I}, \lambda(I) = \frac{1}{D}$$. 
+where $$N_I$$ is 'number' of data which fall into $$I$$, more precisely: $$N_I = \sum_{i=1}^n 1_{X_i \in I}$$. Since we have chosen a regular partition, we have in particular, for all $$I \in \mathcal{I}, \lambda(I) = \frac{1}{D}$$. 
 
 Finally, let us denote by $$V_{\mathcal{I}}$$ the linear space of step functions: $$\sum_{I \in \mathcal{I}} a_{I} \mathds{1}_I$$ where $$a_I \in \mathbb{R}$$. 
 
@@ -36,18 +36,18 @@ Moreover, we can establish the following bound (for regular partitions into $$D$
 
 $$\mathbb{E}_p(||p - p_{\mathcal{I}}||_1) \leq 2\text{ }  \underset{f \in V_{\mathcal{I}}}{ inf} ||p - f||_1 + \sqrt{\frac{D-1}{n}}$$  
 
-Suppose we would like to find a good histogram $\bar{p}$ in $V_{\mathcal{I}}$ such that $||p - \bar{p}_D||_1$ is as small as possible. The classical approach (in case we know $p$) would be to compute for each choice of partition $\mathcal{I}$ (depending on $D$), the quantity $\int_{0}^1|p(x) - \hat{p}_D(x)|dx$ and therefore to deduce the value of $D$ which achieves this minimum. This seems a bit expensive, computationally.
+
+Suppose we would like to find a good histogram $$\bar{p}$$ in $$V_{\mathcal{I}}$$ such that $||p - \bar{p}_D||_1$ is as small as possible. The classical approach (in case we know $p$) would be to compute for each choice of partition $\mathcal{I}$ (depending on $D$), the quantity $\int_{0}^1|p(x) - \hat{p}_D(x)|dx$ and therefore to deduce the value of $D$ which achieves this minimum. This seems a bit expensive, computationally.
 
 If we look at the previous bound, we see that  there has to be some kind of tradeoff between the bias and the variance: we should not choose a $$D$$ which is too large. 
 
 
 At this point, one can argue: "But ! I already know a rule of thumb to make this choice like the Sturge's rule which suggests to take a number of bins close to $$log_2(50) + 1$$ ! What's the point of this article!".
-You're right !
+You're right ! If you're in a rush, go ahead. But experimenting with histograms can be fun.
 
-However that rule is a bit too general and depends only on the sample size and not on the particular distribution of the $$n$$-sample. The point of the method described here is to attempt to define a reasonable $$D$$ using the data. 
+Sturge's rule is a bit too general and depends only on the sample size and not on the particular distribution of the $$n$$-sample. The point of the method described here is to attempt to define a reasonable $$D$$ using information from the data.
 
-
-Let me now describe briefly the methodology I have followed and the attempted examples !
+Let me now describe briefly the methodology I have followed and the attempted examples. Let's dive in !
 
 
 # Methodology
