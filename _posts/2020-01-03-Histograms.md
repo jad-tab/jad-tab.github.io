@@ -112,7 +112,7 @@ But let's leave that for another day.
 
 ### Simulations
 
-Let's get to coding !
+Now let's get coding !
 First I define some basic functions that I need to generate an n-sample.
 
 ```python
@@ -395,7 +395,7 @@ Since I'd like to see if the values of $$R$$ are centered around 1 for each dens
 
 $$RSD = \frac{\sqrt{\bar{V}}}{\bar{R}}$$.
    
-I interpret a high RSD as a high dispersion around the mean value $$\bar{R}$$: in this case, I wouldn't recommend the procedure. This is indeed the case for the density $p_1$ for instance. 
+I interpret a high RSD as a high dispersion around the mean value $$\bar{R}$$: in this case, I wouldn't recommend the procedure. This is indeed the case for the density $$p_1$$ for instance. 
 
 So here are the results !
 
