@@ -381,12 +381,25 @@ for see in range(50):
 ```
 	
 
-![alt]({{ site.url }}{{ site.baseurl }}/figures/results.PNG)
+![alt]({{ site.url }}{{ site.baseurl }}/figures/results.png)
 
 
 
 ## Results
 
-I've used relatively small sample sizes of $n = 50$ and $n = 100$ and I've noticed that the number of bins to choose (be it in the Birge and Rozenholc procedure or the numerical optimization) differed in most cases from Sturge's rule (number of bins $$D_S \approx log_2(n) + 1$$).
 
-I've noticed that the ratio $$R$$$ was not always going to 1 (even after looping over the seeds and choosing a large n): this seems to be especially true when the density $$p$$ is closer to $$p(x) = \mathbb{1}_{[0,1]}$$. 
+Since I'd like to see if the values of $$R$$ are centered around 1 for each density, I computed the relative standard deviation of the statistical observations of $$R$$. The relative standard deviation indicates how dispersed the values of $$R$$ we obtained are.
+
+$$RSD = \frac{\sqrt{\bar{V}}}{\bar{R}}$$.
+
+   
+I interpret a high RSD as a high dispersion around the mean value $$\bar{R}$$: in this case, I wouldn't recommend the procedure. This is indeed the case for the density $p_1$ for instance. 
+
+For $$n = 50$$, I've noticed that the RSD is highest for the first and third densities, and lower for the second one.
+While the density $$p_3$$ has a relatively high RSD at first, we can clearly see that $$\bar{R}$$ is quite large (around 2) - which also seems to apply for our density $p_5$. 
+
+An interesting pattern I've observed was the effect of taking a larger $$n$$: we can see that the RSD (resp. the variance) decreases in general, but the $$\bar{R}$$ for the density number 3 is always the largest.
+
+Finally, we can also observe that the optimal $$D$$ ($$D_M$$) is not always close to Sturge's rule (density $$p_2$$ for $$n=50$$, and density $$p_5$$). 
+
+
