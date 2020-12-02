@@ -410,4 +410,4 @@ An interesting pattern I've observed was the effect of taking a larger $$n$$: we
 Finally, it seems that the optimal $$D$$ ($$D_M$$) is not always close to Sturge's rule (density $$p_2$$ for $$n=50$$, and density $$p_5$$). 
 
 
-So next time I choose the number of bins for my histogram, what should I choose ?
+So next time I have to choose the number of bins for a histogram ... I will just cross my fingers that $$n$$ is large enough ! 
