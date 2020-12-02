@@ -107,19 +107,34 @@ But let's leave that for another day.
 ### Simulations
 
 Let's get to coding !
-First I define some basic functions that I need to generate my n-sample.
-```Python
-#We start by fixing our sample size, which is n = 50 in this case
-#We then fix the random seed and generate random values in [0,1]
+First I define some basic functions that I need to generate an n-sample.
+
+```Python3
+#Let's start by fixing our sample size, which is n = 50 in this case
+#I then fix the random seed and generate random values in [0,1]
 n=50
 x=[]
 random.seed(2)
 for i in range(n):
     x.append(random.random())
+
+#Define the values of p(x) by partitioning [0,1] into two parts and specifying the values it takes
+def piece(x):
+    boundaries= numpy.linspace(0, 1, 3)
+    values = [0.5, 0.5, 1.5]
+    return values[bisect.bisect_left(boundaries, x)]
+	
+#Define the density p as a function of x
+dsty = lambda x: piece(x)
+
 ```
 
+Now, let's present the values taken by the n-sample in a readable data-frame, according for each $$D$$:
+
+#(and thus according to each partition I_D)
 
 ```Python
+
 
 ```
 
