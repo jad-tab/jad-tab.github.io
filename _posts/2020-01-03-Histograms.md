@@ -68,7 +68,7 @@ Therefore, for any given density $$p$$, I'll first compute the $$\hat{D}$$ above
 
 $$R = \frac{\int_0^1|p(x) - \hat{p}_{\hat{D}}(x)|dx}{M}$$
 
-... isclose to 1, this would mean that $\hat{D} \approx D_{min}$ (the procedure finds something close to the exhaustive search). 
+... is close to 1, this would mean that $$\hat{D} \approx D_{min}$$ (the procedure finds something close to the exhaustive search). 
 
 For each density I try out, I'll compute the mean value and variance of the ratios obtained:
 
@@ -80,7 +80,7 @@ Hopefully, this will "smooth out" the effects of randomness.
 
 ## Generating an n-sample and choice of densities
 
-To generate an $$n$$-sample with density $p$ I'm going to apply the fundamental theorem of simulation. Nothing too fancy.
+To generate an $$n$$-sample with density $$p$$ I'm going to apply the fundamental theorem of simulation. Nothing too fancy.
 There are of course much wittier ways to do that (Monte-Carlo rejection sampling...). But let's have some fun inverting functions. 
 If I denote by $$U$$ a random variable with uniform distribution on $$[0 ; 1]$$, we have the following result:
 
