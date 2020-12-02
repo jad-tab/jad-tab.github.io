@@ -17,7 +17,7 @@ We could choose how we want our histogram to be plotted to draw insight from the
 
 In this article, I experiment with a procedure described by Birgé and Rozenholc that allows us to select a good number of bins. 
 
-# Notations and mathematical context
+## Notations and mathematical context
 
 Let us take $$(X_1, ..., X_n)$$ an $$n-$$sample in a space $$E = [0 , 1]$$. Let us suppose they are sampled from some density $$p$$ with respect to the Lebesgue measure $$\lambda$$. I will work in the case of a regular partition $$\mathcal{I}$$ of $$E$$ into $$D$$ equal sub-intervals. This $$D$$ variable is the number of bins we would like to use, in practice.
 
@@ -34,7 +34,7 @@ $$R_1 = \mathbb{E}_p(||p - p_{\mathcal{I}}||_1) $$
 
 Moreover, we can establish the following bound (for regular partitions into $$D$$ intervals):
 
-$$\mathbb{E}_p(||p - p_{\mathcal{I}}||_1)%% $$ $$\leq 2 $$  inf ||p - f||_{1} + \sqrt{\frac{D-1}{n}}$$
+$$\mathbb{E}_p(||p - p_{\mathcal{I}}||_1) \leq 2\text{ }  \underset{f \in V_{\mathcal{I}}}{ inf} ||p - f||_1 + \sqrt{\frac{D-1}{n}}$$
 
 in which the infimum is taken over all $$f \in V_{\mathcal{I}}$$.
 
@@ -52,14 +52,23 @@ Sturge's rule is a bit too general and depends only on the sample size and not o
 Let me now describe briefly the methodology I have followed and the attempted examples. Let's dive in !
 
 
-# Methodology
+## Methodology
 
 
 For all $$D \geq 1$$, let's define the log-likelihood at $$\hat{p}_D$$ based on the observations $$\mathbb{X} = (X_1, .... X_n)$$ by: $$L_{\mathbb{X}}(D) = \underset{I \in I_D}{\sum} N_I log(N_I \frac{ D }{n})$$
 
 The heart of the procedure is to introduce a penalty function, defined for each integer $$D>0$$ as: 
-$$pen(D) = D - 1 + (log(D))^{2.5}$$. The method suggests that the value of $\hat{D}$ to choose is: 
+$$pen(D) = D - 1 + (log(D))^{2.5}$$. The method suggests that the number of bins $$\hat{D}$$ to choose is: 
 
  $$\boxed{\hat{D} = \underset{1 \leq D \leq n/log(n)}{argmax} (\sum_{I \in \mathcal{I_D}} N_I log(N_I D/n) - (D - 1 + (log(D)^{2.5})}$$
 
 
+Therefore, for any given density $p$, we compute the $\hat{D}$ above and we will compare it with the value of $D$ which achieves $M = \underset{1 \leq D \leq n/log(n)}{min} \int_0^1 |p(x) - \hat{p}_D(x)|dx$. This is made possible by computing the ratio: 
+
+$$R = \frac{\int_0^1|p(x) - \hat{p}_{\hat{D}}(x)|dx}{M}$$
+
+A ratio of 1 suggests that $\hat{D} = D_{min}$ (the two 'D' values coincide). 
+
+We will repeat the experience various times and then compute the mean value and variance of the ratios, which we denote by:
+
+$$\bar{R} = \frac{1}{k} \sum_{j=1}^k R_j \quad \quad \bar{V} = \frac{1}{k} \sum_{j=1}^k (R_j - \bar{R})^2$$.
