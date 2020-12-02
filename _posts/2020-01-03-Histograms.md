@@ -11,7 +11,7 @@ mathjax: "true"
 Histograms are a cool way to visualize data distributions:
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/figures/histogram.jpg)
+![alt]({{ site.url }}{{ site.baseurl }}/figures/histogram.JPG)
 
 We could choose how we want our histogram to be plotted to draw insight from the data at hand. How many bins should we use, for a histogram ?
 
@@ -34,16 +34,22 @@ $$R_1 = \mathbb{E}_p(||p - p_{\mathcal{I}}||_1) $$
 
 Moreover, we can establish the following bound (for regular partitions into $$D$$ intervals):
 
-$$\mathbb{E}_p(||p - p_{\mathcal{I}}||_1) \leq 2\text{ }  \underset{f \in V_{\mathcal{I}}}{ inf} ||p - f||_1 + \sqrt{\frac{D-1}{n}}$$
+$$\mathbb{E}_p(||p - p_{\mathcal{I}}||_1) \leq 2\text{ }  \underset{f \in V_{\mathcal{I}}}{ inf} ||p - f||_1 + \sqrt{\frac{D-1}{n}}$$  
 
-Suppose we would like to find a good histogram $\bar{p}$ in $V_{\mathcal{I}}$ such that $||p - \bar{p}_D||_1$ is as small as possible. The classical approach (in case we know $p$) would be to compute for each choice of partition $\mathcal{I}$ (depending on $D$), the quantity $\int_{0}^1|p(x) - \hat{p}_D(x)|dx$ and therefore to deduce the value of $D$ which achieves this minimum.
+Suppose we would like to find a good histogram $\bar{p}$ in $V_{\mathcal{I}}$ such that $||p - \bar{p}_D||_1$ is as small as possible. The classical approach (in case we know $p$) would be to compute for each choice of partition $\mathcal{I}$ (depending on $D$), the quantity $\int_{0}^1|p(x) - \hat{p}_D(x)|dx$ and therefore to deduce the value of $D$ which achieves this minimum. This seems a bit expensive, computationally.
 
-This seems computationally expensive !
+If we look at the previous bound, we see that  there has to be some kind of tradeoff between the bias and the variance: we should not choose a $$D$$ which is too large. 
 
-### H3 Heading
 
-Basic tex
+At this point, one can argue: "But ! I already know a rule of thumb to make this choice like the Sturge's rule which suggests to take a number of bins close to $$log_2(50) + 1$$ ! What's the point of this article!".
+You're right !
 
-$$x + y = \frac{2}{3} $$
+However that rule is a bit too general and depends only on the sample size and not on the particular distribution of the $$n$$-sample. The point of the method described here is to attempt to define a reasonable $$D$$ using the data. 
 
-![alt]({{ site.url }}{{ site.baseurl }}/images/me.jpg)
+
+Let me now describe briefly the methodology I have followed and the attempted examples !
+
+
+### Methodology
+
+
