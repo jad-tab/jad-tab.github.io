@@ -90,7 +90,7 @@ There are of course much wittier ways to do that (Monte-Carlo rejection sampling
 If I denote by $$U$$ a random variable with uniform distribution on $$[0 ; 1]$$, we have the following result:
 
 
-### [Theorem: Simulation of an n-sample]
+### Theorem: Simulation of an n-sample
 
 Let $$X$$ be a real-valued random variable with cumulative distribution function $$F(x) = \mathbb{P}(X \leq x)$$, we denote by $$F^{-1}$$ its generalized inverse defined as $$F^{-1}(u) = inf \{x : F(x) \geq u\}$$. We know that $$F^{-1}(U)$$ has the same distribution as $$X$$.
 
