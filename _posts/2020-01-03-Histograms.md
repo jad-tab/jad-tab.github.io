@@ -178,9 +178,73 @@ N_t=N_.pivot_table(columns=['i'],values=0,aggfunc=lambda x: ' '.join(str(v) for 
 
 ```
 
-This gives us a clear idea of the generated n-sample:
-
+This gives us a clear idea of the generated n-sample. Looks something like this:
 
 ![alt]({{ site.url }}{{ site.baseurl }}/figures/cod2.PNG)
+
+Finally, let's build some histograms.
+
+```python
+#Define Ni(D, I) as the number of data X_k which fall in the I-th interval of the D-partition.
+def Ni(D,I):
+    return int(float(N_t[D].tolist()[0].split(' ')[I-1])
+
+Construct the histogram p_D by specifying its values on each of the D sub-intervals.
+
+def histo(x, D, n):
+    boundaries = numpy.linspace(0, 1, D+1)
+    values=[]
+    for k in range(D+1):
+        values.append(Ni(D,k)*D/n)
+    values[bisect.bisect_left(boundaries, x)]
+    return values[bisect.bisect_left(boundaries, x)]
+	
+#Define it as a function of x and D
+p_chap = lambda x,D: histo(x,D,n)
+```
+We can introduce the error function as follows:
+
+```python
+#We introduce the function f as the difference between p(x) and p_D
+f = lambda x,D: abs(dsty(x)-p_chap(x,D)) 
+```
+
+And for more fun, I redefine the Riemann sums to compute the integrals that I need. 
+
+```python
+#We quickly implement numerical integration by Riemann sums:
+def integrate(f, N,D):
+    S=0
+    for k in range(N):
+        S = S + f(k/N,D)*(1/N)
+    return S
+```
+
+Let us now compute the real deal: $$M = \underset{1 \leq D \leq n/log(n)}{min} \int_0^1 \lvert p(x) - \hat{p}_D(x) \rvert dx$$
+
+```python
+#Denote by M(D) the value of the integral of |p - p_D| for a given D. The list M_min is the list 
+#from which we will extract the best M
+def M(D):
+    N=100
+    I=integrate(f,N,D)
+    return I
+
+M_min=[]
+for i in range(12):
+    D=i+1
+    M_min.append(M(i+1))
+```
+
+These are the values of the best $$M$$ and $$D$$ I find:
+
+```python
+#This is the value of M
+print(min(M_min))
+
+#The following is the value of D which achieves the minimum
+M_min_arr=np.array(M_min)
+print(M_min_arr.argmin()+1)
+```
 
 
