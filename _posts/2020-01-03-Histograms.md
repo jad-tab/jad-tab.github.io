@@ -381,8 +381,6 @@ for see in range(50):
 ```
 	
 
-![alt]({{ site.url }}{{ site.baseurl }}/figures/results.png)
-
 
 
 ## Results
@@ -391,15 +389,23 @@ for see in range(50):
 Since I'd like to see if the values of $$R$$ are centered around 1 for each density, I computed the relative standard deviation of the statistical observations of $$R$$. The relative standard deviation indicates how dispersed the values of $$R$$ we obtained are.
 
 $$RSD = \frac{\sqrt{\bar{V}}}{\bar{R}}$$.
-
    
 I interpret a high RSD as a high dispersion around the mean value $$\bar{R}$$: in this case, I wouldn't recommend the procedure. This is indeed the case for the density $p_1$ for instance. 
+
+So here are the results !
+
+![alt]({{ site.url }}{{ site.baseurl }}/figures/results.png)
+
 
 For $$n = 50$$, I've noticed that the RSD is highest for the first and third densities, and lower for the second one.
 While the density $$p_3$$ has a relatively high RSD at first, we can clearly see that $$\bar{R}$$ is quite large (around 2) - which also seems to apply for our density $p_5$. 
 
+Plotting some of the histograms shows us if they capture the peculiarities of the densities, like this one for $$p_4$$:
+
+![alt]({{ site.url }}{{ site.baseurl }}/figures/plot1.png)
+
 An interesting pattern I've observed was the effect of taking a larger $$n$$: we can see that the RSD (resp. the variance) decreases in general, but the $$\bar{R}$$ for the density number 3 is always the largest.
 
-Finally, we can also observe that the optimal $$D$$ ($$D_M$$) is not always close to Sturge's rule (density $$p_2$$ for $$n=50$$, and density $$p_5$$). 
+Finally, it seems that the optimal $$D$$ ($$D_M$$) is not always close to Sturge's rule (density $$p_2$$ for $$n=50$$, and density $$p_5$$). 
 
 
