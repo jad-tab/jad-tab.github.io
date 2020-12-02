@@ -60,7 +60,7 @@ For all $$D \geq 1$$, let's define the log-likelihood at $$\hat{p}_D$$ based on 
 The heart of the procedure is to introduce a penalty function, defined for each integer $$D>0$$ as: 
 $$pen(D) = D - 1 + (log(D))^{2.5}$$. The method suggests that the number of bins $$\hat{D}$$ to choose is: 
 
-$$\boxed{\hat{D} = \underset{1 \leq D \leq n/log(n)}{argmax} (\sum_{I \in \mathcal{I_D}} N_I log(N_I D/n) - (D - 1 + (log(D)^{2.5})}$$
+$$\boxed{\hat{D} = 1 \leq D \leq n/log(n)}argmax_(\sum_{I \in \mathcal{I_D}} N_I log(N_I D/n) - (D - 1 + (log(D)^{2.5})}$$.
 
 Therefore, for any given density $p$, we compute the $\hat{D}$ above and we will compare it with the value of $D$ which achieves $M = \underset{1 \leq D \leq n/log(n)}{min} \int_0^1 |p(x) - \hat{p}_D(x)|dx$. This is made possible by computing the ratio: 
 
