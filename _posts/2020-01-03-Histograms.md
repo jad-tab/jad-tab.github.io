@@ -77,7 +77,7 @@ Hopefully, this will "smooth out" the effects of randomness.
 
 
 
-## Generating an $n$-sample and choice of densities
+## Generating an n-sample and choice of densities
 
 To generate an $$n$$-sample with density $p$ I'm going to apply the fundamental theorem of simulation. Nothing too fancy.
 There are of course much wittier ways to do that (Monte-Carlo rejection sampling...). But let's have some fun inverting functions. 
@@ -128,12 +128,59 @@ def piece(x):
 dsty = lambda x: piece(x)
 
 ```
-Now, let's present the values taken by the n-sample in a readable data-frame, according for each $$D$$:
+Now, let's present the values taken by the n-sample in a readable data-frame, for each $$D$$:
 
 #(and thus according to each partition I_D)
 
-```Python3
+```python
+#We shall now present the values taken by the n-sample in a data-frame, according to each of the values of D
+#(and thus according to each partition I_D)
 
+x_=pd.DataFrame(x)
+
+p=x_[0].apply(lambda y: y*2 if y<(1/4) else y*(2/3)+(1/3))
+
+D=[]
+for i in range(math.floor(n/math.log(n))):
+    D.append(i+1)
+
+lam=[]
+for i in D:
+    lam.append(1/(i))
+
+inter=[]
+for i in range(math.floor(n/math.log(n))):
+    k=len(np.arange(0,i+1))
+    inter.append(np.arange(0,i+2)/k)
+
+N=[]
+for j in inter:
+    for i in j:
+        N.append(((p>=i) & (p<i+(1/(len(j)-1)))).sum())   
+
+N_=pd.DataFrame(N)
+N_[0].apply(lambda y: '----' if y==0 else y)
+
+N_['i']=0
+j=0
+k=2
+h=3
+for i in range(N_.shape[0]):
+    N_.loc[j:k,'i']=h-2
+    N_.loc[k-1,'i']='---'
+    j=k
+    k+=h
+    h+=1 
+
+N_=N_.loc[N_.loc[:,'i']!='---']
+
+N_t=N_.pivot_table(columns=['i'],values=0,aggfunc=lambda x: ' '.join(str(v) for v in x))
 
 ```
+
+This gives us a clear idea of the generated n-sample:
+
+
+![alt]({{ site.url }}{{ site.baseurl }}/figures/cod2.PNG)
+
 
