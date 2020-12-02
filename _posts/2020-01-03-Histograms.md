@@ -13,17 +13,17 @@ Histograms are a cool way to visualize data distributions:
 
 ![alt]({{ site.url }}{{ site.baseurl }}/figures/histogram.JPG)
 
-We could choose how we want our histogram to be plotted to draw insight from the data at hand. How many bins should we use, for a histogram ?
+We could choose how we want our histogram to be plotted to draw insight from the data at hand. But how many bins should we use for a histogram in practice ?
 
 In this article, I experiment with a procedure described by Birgé and Rozenholc that allows us to select a good number of bins. 
 
 # Notations and mathematical context
 
-Let us take $$(X_1, ..., X_n)$$ an $$n-$$sample in a space $$E = [0 , 1]$$. Let us suppose they are sampled from some density $p$ with respect to the Lebesgue measure $\lambda$. I will work in the case of a regular partition $$\mathcal{I}$$ of $$E$$ into $$D$$ equal sub-intervals. This $$D$$ variable is the number of bins we would like to use, in practice.
+Let us take $$(X_1, ..., X_n)$$ an $$n-$$sample in a space $$E = [0 , 1]$$. Let us suppose they are sampled from some density $$p$$ with respect to the Lebesgue measure $$\lambda$$. I will work in the case of a regular partition $$\mathcal{I}$$ of $$E$$ into $$D$$ equal sub-intervals. This $$D$$ variable is the number of bins we would like to use, in practice.
 
-We would like to estimate $$p$$ using a histogram. The histogram of $p$ based on the partition $$\mathcal{I}$$ isthe random function:
+We would like to estimate $$p$$ using a histogram. The histogram of $p$ based on the partition $$\mathcal{I}$$ is the random function:
 	
-	$$\hat{p}_{\mathcal{I}}(x) = \sum_{I \in \mathcal{I}} \frac{N_I}{n \lambda(I)} \mathds{1}_{I}(x)$$ 
+$$\hat{p}_{\mathcal{I}}(x) = \sum_{I \in \mathcal{I}} \frac{N_I}{n \lambda(I)} \mathds{1}_{I}(x)$$ 
 
 where $$N_I$$ is 'number' of data which fall into $$I$$, more precisely: $$N_I = \sum_{i=1}^n \mathds{1}_{X_i \in I}$$. Since we have chosen a regular partition, we have in particular, for all $$I \in \mathcal{I}, \lambda(I) = \frac{1}{D}$$. 
 
@@ -50,6 +50,6 @@ However that rule is a bit too general and depends only on the sample size and n
 Let me now describe briefly the methodology I have followed and the attempted examples !
 
 
-### Methodology
+# Methodology
 
 
