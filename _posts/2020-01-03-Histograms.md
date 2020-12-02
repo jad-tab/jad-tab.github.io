@@ -90,17 +90,13 @@ Let $$X$$ be a real-valued random variable with cumulative distribution function
 
 Therefore, in order to generate an $$n$$-sample, it is sufficient to sample from a uniform random distribution and to invert the cumulative distribution function of each of the distributions we consider. Let me first show you the distributions I have chosen to try out. 
 
-$$p_1 = \frac{1}{2} 1_{[0, 1/2)} + \frac{3}{2} 1{[1/2 ; 1]} \\
-p_2 = 2 1_{[0, 1/8]} + \frac{4}{5} 1_{[1/8 ; 3/4)} + \mathds{1}_{[3/4; 1]} \\
+$$p_1 = \frac{1}{2} 1_{[0, 1/2)} + \frac{3}{2} 1_{[1/2 ; 1]} \\
+p_2 = 2 1_{[0, 1/8]} + \frac{4}{5} 1_{[1/8 ; 3/4)} + 1_{[3/4; 1]} \\
 p_3 = \frac{1}{Arctan(1) (1 + x^2)} 1_{[0,1]} $$
 
-$$p_4(x) = 2(3x - floor(3x)) 1_{[0,1]} \\ p_5(x) = \frac{\pi}{3} sin(2 \pi x)1_{[0,1/2]} + \frac{2 \pi}{3} sin(2\pi (x - \frac{1}{2})) 1_{[1/2,1]}$$.
+$$p_4(x) = 2(3x - floor(3x)) 1_{[0,1]}\\
+p_5(x) = \frac{\pi}{3} sin(2 \pi x)1_{[0,1/2]} + \frac{2 \pi}{3} sin(2\pi (x - \frac{1}{2})) 1_{[1/2,1]}$$.
  
- I didn't choose these densities (completely) at random, though !
- 
- 
- 
- 
-Other possible interesting choices of underlying densities would be functions which "vary a lot" (high total variation) since by the course, we recall that:
+I didn't choose these densities (completely) at 'random', though (no pun intended). To be honest, I was trying to find ways to make the $$L^1$$ risk as bad as possible, using this inequality:
 
-$$\underset{f \in V_{\mathcal{I}}}{inf} ||p - f||_1 \leq \frac{1}{2D} V_{[0,1]}(p)$$
+$$\underset{f \in V_{\mathcal{I}}}{inf} \lvert \lvert p - f \rvert \rvert _1 \leq \frac{1}{2D} V_{[0,1]}(p)$$
