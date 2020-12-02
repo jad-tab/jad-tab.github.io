@@ -25,7 +25,7 @@ Of course, this article is just me playing around with histograms. Please refer 
 
 ## Notations and mathematical context
 
-Let us take $$(X_1, ..., X_n)$$ an $$n-$$sample in a space $$E = [0 , 1]$$. Let us suppose they are sampled from some density $$p$$ with respect to the Lebesgue measure $$\lambda$$. I will work in the case of a regular partition $$\mathcal{I}$$ of $$E$$ into $$D$$ equal sub-intervals. This $$D$$ variable is the number of bins we would like to use, in practice.
+Let us take $$(X_1, ..., X_n)$$ an $$n-$$sample in the space $$E = [0 , 1]$$. Let us suppose they are sampled from some density $$p$$ with respect to the Lebesgue measure $$\lambda$$. I will work in the case of a regular partition $$\mathcal{I}$$ of $$E$$ into $$D$$ equal sub-intervals. This $$D$$ variable is the number of bins we would like to use, in practice.
 
 We would like to estimate $$p$$ using a histogram. The histogram of $$p$$ based on the partition $$\mathcal{I}$$ is the random function:
 	
@@ -403,7 +403,7 @@ So here are the results !
 
 
 For $$n = 50$$, I've noticed that the RSD is highest for the first and third densities, and lower for the second one.
-While the density $$p_3$$ has a relatively high RSD at first, we can clearly see that $$\bar{R}$$ is quite large (around 2) - which also seems to apply for our density $p_5$. 
+While the density $$p_3$$ has a relatively high RSD at first, we can clearly see that $$\bar{R}$$ is quite large (around 2) - which also seems to apply for our density $$p_5$$. 
 
 Plotting some of the histograms shows us if they capture the peculiarities of the densities, like this one for $$p_4$$:
 
