@@ -62,12 +62,19 @@ $$pen(D) = D - 1 + (log(D))^{2.5}$$. The method suggests that the number of bins
 
 $$\boxed{\hat{D} = \underset{1 \leq D \leq n/log(n)}{argmax} (\sum_{I \in \mathcal{I_D}} N_I log(N_I D/n) - (D - 1 + (log(D)^{2.5})}$$
 
-Therefore, for any given density $$p$$, we compute the $$\hat{D}$$ above and we will compare it with the value of $D$ which achieves $$M = \underset{1 \leq D \leq n/log(n)}{min} \int_0^1 \lvert p(x) - \hat{p}_D(x) \rvert dx$$. This is made possible by computing the ratio: 
+For the sake of this experiment, I will use a few mock probability densities for the $$n$$-sample.
+Therefore, for any given density $$p$$, I'll first compute the $$\hat{D}$$ above (the one suggested by the procedure) and I'll then compare it with the value of $D$ which achieves $$M = \underset{1 \leq D \leq n/log(n)}{min} \int_0^1 \lvert p(x) - \hat{p}_D(x) \rvert dx$$. This will allow me to assess how this procedure measures up heuristically. Practically, if $$R$$:
 
 $$R = \frac{\int_0^1|p(x) - \hat{p}_{\hat{D}}(x)|dx}{M}$$
 
-A ratio of 1 suggests that $\hat{D} = D_{min}$ (the two 'D' values coincide). 
+... isclose to 1, this would mean that $\hat{D} \approx D_{min}$ (the procedure finds something close to the exhaustive search). 
 
-We will repeat the experience various times and then compute the mean value and variance of the ratios, which we denote by:
+For each density I try out, I'll compute the mean value and variance of the ratios obtained:
 
 $$\bar{R} = \frac{1}{k} \sum_{j=1}^k R_j \quad \quad \bar{V} = \frac{1}{k} \sum_{j=1}^k (R_j - \bar{R})^2$$.
+
+Hopefully, this will "smooth out" the effects of randomness.
+
+
+
+
