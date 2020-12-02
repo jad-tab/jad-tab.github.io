@@ -41,7 +41,7 @@ in which the infimum is taken over all $$f \in V_{\mathcal{I}}$$.
 Suppose we would like to find a good histogram $$\bar{p}$$ in $$V_{\mathcal{I}}$$ such that $$||p - \bar{p}_D||_1$$ is as small as possible. The classical approach (in case we know $$p$$) would be to compute for each choice of partition $$\mathcal{I}$$ (depending on $$D$$), the quantity $$\int_{0}^1|p(x) - \hat{p}_D(x)|dx$$ and therefore to deduce the value of $$D$$ which achieves this minimum. 
 This seems a bit expensive, computationally...
 
-If we look at the previous bound, we see that  there has to be some kind of tradeoff between the bias and the variance: we should not choose a $$D$$ which is too large. 
+If we look at the previous bound, we see that  there has to be some kind of tradeoff between the bias and the variance: just choosing the largest value of $$D$$ is ... too easy to be true. 
 
 
 At this point, one can argue: "But ! I already know a rule of thumb to make this choice like the Sturge's rule which suggests to take a number of bins close to $$log_2(50) + 1$$ ! What's the point of this article!".
@@ -79,30 +79,33 @@ Hopefully, this will "smooth out" the effects of randomness.
 
 ## Generating an $n$-sample and choice of densities
 
-To generate an $$n$$-sample with density $p$ I'm going to use the fundamental theorem of simulation. There are much wittier ways to do that of course (Monte-Carlo methods...). But let's have some fun inverting functions. 
+To generate an $$n$$-sample with density $p$ I'm going to use the fundamental theorem of simulation. There are of course much wittier ways to do that (Monte-Carlo rejection sampling...). But let's have some fun inverting functions. 
 Let us denote by $$U$$ a random variable with uniform distribution on $$[0 ; 1]$$.
 
 
-### [Theorem]: Simulation of an $n$-sample
+### [Theorem: Simulation of an n-sample]
 
 Let $$X$$ be a real-valued random variable with cumulative distribution function $$F(x) = \mathbb{P}(X \leq x)$$, we denote by $$F^{-1}$$ its generalized inverse defined as $$F^{-1}(u) = inf \{x : F(x) \geq u\}$$. We know that $$F^{-1}(U)$$ has the same distribution as $X$.
 
 
-Therefore, in order to generate an $$n$$-sample, it is sufficient to sample from a uniform random distribution and to invert the cumulative distribution function of each of the distributions we consider.
+Therefore, in order to generate an $$n$$-sample, it is sufficient to sample from a uniform random distribution and to invert the cumulative distribution function of each of the distributions we consider. Let me first show you the distributions I have chosen to try out.
 
-Let us determine each cumulative distribution function $F_k$ and its inverse $F^{-1}_k$ for each density $p_k$: \\
-$p_1 = \frac{1}{2} \mathds{1}_{[0, 1/2)} + \frac{3}{2} \mathds{1}_{[1/2 ; 1]} \\
-p_2 = 2 \mathds{1}_{[0, 1/8]} + \frac{4}{5} \mathds{1}_{[1/8 ; 3/4)} + \mathds{1}_{[3/4; 1]} \\
-p_3 = \frac{1}{Arctan(1) (1 + x^2)} \mathds{1}_{[0,1]} $
-\\
-\\
-We have, respectively: \\
-$F_1(x) = \frac{x}{2} \mathds{1}_{[0,1/2])} + (\frac{3x}{2} - \frac{1}{2}) \mathds{1}_{[1/2, 1]} \\
-F_2(x) = 2x\mathds{1}_{[0,1/8)} + (\frac{4x}{5} + \frac{15}{100}) \mathds{1}_{[1/8, 3/4)} + x \mathds{1}_{[3/4, 1]}\\ F_3(x) = \frac{Arctan(x)}{Arctan(1)} \mathds{1}_{[0,1]}$
-\\ 
-\\
-Thus:
-$F_1^{-1}(u) = 2u \mathds{1}_{[0, 1/4]} + (\frac{2u}{3} + \frac{1}{3}) \mathds{1}_{[1/4, 1]}\\ F_2^{-1} (u) = \frac{u}{2} \mathds{1}_{[0, 1/4)} + (\frac{5u}{4} - \frac{3}{16})\mathds{1}_{[1/4, 3/4]} + u \mathds{1}_{(3/4, 1]}\\ F_3^{-1}(u) = tan(\frac{\pi}{4} u) \mathds{1}_{[0,1]}$
+$$p_1 = \frac{1}{2} 1_{[0, 1/2)} + \frac{3}{2} 1{[1/2 ; 1]} \\
+p_2 = 2 1_{[0, 1/8]} + \frac{4}{5} 1_{[1/8 ; 3/4)} + \mathds{1}_{[3/4; 1]} \\
+p_3 = \frac{1}{Arctan(1) (1 + x^2)} 1_{[0,1]} $$
+
+I have also chosen the following densities: 
+
+$$p_4(x) = 2(3x - floor(3x)) \mathds{1}_{[0,1]} \\ p_5(x) = \frac{\pi}{3} sin(2 \pi x)\mathds{1}_{[0,1/2]} + \frac{2 \pi}{3} sin(2\pi (x - \frac{1}{2})) \mathds{1}_{[1/2,1]}$$.
+ 
+Let us determine each cumulative distribution function $$F_k$$ and its inverse $$F^{-1}_k$$ for each density $$p_k$$. 
+
+We have, respectively: 
+$$F_1(x) = \frac{x}{2} 1_{[0,1/2])} + (\frac{3x}{2} - \frac{1}{2}) 1_{[1/2, 1]} \\
+F_2(x) = 2x 1_{[0,1/8)} + (\frac{4x}{5} + \frac{15}{100}) 1_{[1/8, 3/4)} + x 1_{[3/4, 1]} \\ F_3(x) = \frac{Arctan(x)}{Arctan(1)} 1_{[0,1]}$$
+
+
+$$F_1^{-1}(u) = 2u \mathds{1}_{[0, 1/4]} + (\frac{2u}{3} + \frac{1}{3}) \mathds{1}_{[1/4, 1]}\\ F_2^{-1} (u) = \frac{u}{2} \mathds{1}_{[0, 1/4)} + (\frac{5u}{4} - \frac{3}{16})\mathds{1}_{[1/4, 3/4]} + u \mathds{1}_{(3/4, 1]}\\ F_3^{-1}(u) = tan(\frac{\pi}{4} u) \mathds{1}_{[0,1]}$
 \\
 \\
 
