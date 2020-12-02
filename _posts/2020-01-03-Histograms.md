@@ -239,7 +239,7 @@ for i in range(12):
 These are the values of the best $$M$$ and $$D$$ I find:
 
 ```python
-#This is the value of M
+#Fetch M
 print(min(M_min))
 
 #The following is the value of D which achieves the minimum
@@ -247,4 +247,146 @@ M_min_arr=np.array(M_min)
 print(M_min_arr.argmin()+1)
 ```
 
+I find this:
 
+![alt]({{ site.url }}{{ site.baseurl }}/figures/cod3.PNG)
+
+### Let's compute $$\hat{D}$$
+
+I'll start by implementing below the log-likelihood based on the observations $$\mathbb{X} = (X_1, .... X_n)$$ as: $$L_{\mathbb{X}}(D) = \underset{I \in I_D}{\sum} N_I log(N_I \frac{ D }{n})$$.
+I then compute:
+$$\hat{D} = \underset{1 \leq D \leq n/log(n)}{argmax} (\sum_{I \in \mathcal{I_D}} N_I log(N_I D/n) - (D - 1 + (log(D)^{2.5})$$
+
+```python
+def Lx(D,n):
+    a=0
+    for i in range(D):
+        if Ni(D,i+1)!=0:
+            a+=np.log(Ni(D,i+1)*D/n)*Ni(D,i+1)
+        else :
+            a+=0
+    return a   
+
+#D_chap takes an 'n' argument (the number of data) and returns D hat.
+def D_chap(n):
+    d=math.floor(n/np.log(n))
+    res=[]
+    for i in range(d):
+        l=Lx(i+1,n)
+        pen=i+(np.log(i+1))**2.5
+        res.append(l-pen)
+    a={'Lx-pen': res, 'D_chap': np.arange(d)+1}    
+    df=pd.DataFrame(a)
+    s=df[df['Lx-pen']==max(df['Lx-pen'])]
+    return s.iloc[0,1]
+```
+
+One last step allows us to compute the ratio $$R$$:
+
+```python
+def R(D_):
+    global D
+    D=D_
+    return M(D)/min(M_min)
+
+```
+
+Now we have everything we need to compute the ratio for a given density.
+
+Time for some plots !
+
+
+```python
+#Plot the real density (in blue) as well as the histogram corresponding to D hat. 
+
+
+x1=np.linspace(0,1,100)
+y1=[dsty(x) for x in x1]
+y2=[histo(x,D_chap(50),50) for x in x1]
+
+plt.plot(x1,y1)
+plt.plot(x1,y2)
+plt.legend(('density','histogram: D='+str(D_chap(50))))
+
+```
+
+Before I show you some plots and results, remember the random seed that I fixed in the beginning ?
+Well, let's now re-sample 50 new observations and see what we get (rinse and repeat multiple times). This allows us to compute the empirical mean and empirical variance I introduced earlier. This can be done simply by looping over the random seeds:
+
+```python
+
+R_b=[]
+D_chapo=[]
+D_M=[]
+
+for see in range(50):
+    n=50
+    x=[]
+    random.seed(see)
+    for i in range(n):
+        x.append(random.random())
+
+    x_=pd.DataFrame(x)
+
+    p=x_[0].apply(lambda y: y*2 if y<(1/4) else y*(2/3)+(1/3))
+
+    D=[]
+    for i in range(math.floor(n/math.log(n))):
+        D.append(i+1)
+
+    lam=[]
+    for i in D:
+        lam.append(1/(i))
+
+    inter=[]
+    for i in range(math.floor(n/math.log(n))):
+        k=len(np.arange(0,i+1))
+        inter.append(np.arange(0,i+2)/k)
+
+    N=[]
+    for j in inter:
+        for i in j:
+            N.append(((p>=i) & (p<i+(1/(len(j)-1)))).sum())   
+
+    N_=pd.DataFrame(N)
+    N_[0].apply(lambda y: '----' if y==0 else y)
+
+    N_['i']=0
+    j=0
+    k=2
+    h=3
+    for i in range(N_.shape[0]):
+        N_.loc[j:k,'i']=h-2
+        N_.loc[k-1,'i']='---'
+        j=k
+        k+=h
+        h+=1 
+
+    N_=N_.loc[N_.loc[:,'i']!='---']
+
+    N_t=N_.pivot_table(columns=['i'],values=0,aggfunc=lambda x: ' '.join(str(v) for v in x))
+
+    M_min=[]
+    for i in range(12):
+        D=i+1
+        M_min.append(M(i+1))
+
+    D_=D_chap(n)
+    M_min_arr=np.array(M_min)
+    
+    R_b.append(R(D_))
+    D_chapo.append(D_)
+    D_M.append(M_min_arr.argmin()+1)
+	
+```
+	
+
+![alt]({{ site.url }}{{ site.baseurl }}/figures/results.PNG)
+
+
+
+## Results
+
+I've used relatively small sample sizes of $n = 50$ and $n = 100$ and I've noticed that the number of bins to choose (be it in the Birge and Rozenholc procedure or the numerical optimization) differed in most cases from Sturge's rule (number of bins $$D_S \approx log_2(n) + 1$$).
+
+I've noticed that the ratio $$R$$$ was not always going to 1 (even after looping over the seeds and choosing a large n): this seems to be especially true when the density $$p$$ is closer to $$p(x) = \mathbb{1}_{[0,1]}$$. 
