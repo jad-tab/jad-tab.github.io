@@ -15,7 +15,7 @@ Histograms are a cool way to visualize data distributions:
 
 We could choose how we want our histogram to be plotted to draw insight from the data at hand. But how many bins should we use for a histogram in practice ?
 
-In this article, I experiment with a procedure described by Birgé and Rozenholc that allows us to select a good number of bins. 
+In this article, I experiment with a procedure discovered and published by Birgé and Rozenholc that allows us to select a "good" number of bins. 
 
 ## Notations and mathematical context
 
@@ -88,7 +88,9 @@ If I denote by $$U$$ a random variable with uniform distribution on $$[0 ; 1]$$,
 
 Let $$X$$ be a real-valued random variable with cumulative distribution function $$F(x) = \mathbb{P}(X \leq x)$$, we denote by $$F^{-1}$$ its generalized inverse defined as $$F^{-1}(u) = inf \{x : F(x) \geq u\}$$. We know that $$F^{-1}(U)$$ has the same distribution as $$X$$.
 
-Therefore, in order to generate an $$n$$-sample, it is sufficient to sample from a uniform random distribution and to invert the cumulative distribution function of each of the distributions we consider. Let me first show you the distributions I have chosen to try out. 
+Therefore, in order to generate an $$n$$-sample, it is sufficient to sample from a uniform random distribution and to invert the cumulative distribution function of each of the distributions we consider. Easier said than done !
+
+Let me first show you the distributions I have chosen to try out. 
 
 $$p_1 = \frac{1}{2} 1_{[0, 1/2)} + \frac{3}{2} \times 1_{[1/2 ; 1]} \\
 p_2 = 2  1_{[0, 1/8]} + \frac{4}{5}  1_{[1/8 ; 3/4)} + 1_{[3/4; 1]} \\
@@ -96,10 +98,28 @@ p_3 = \frac{1}{Arctan(1) (1 + x^2)} 1_{[0,1]}  \\
 p_4(x) = 2(3x - floor(3x)) 1_{[0,1]}\\
 p_5(x) = \frac{\pi}{3} sin(2 \pi x)1_{[0,1/2]} + \frac{2 \pi}{3} sin(2\pi (x - \frac{1}{2})) 1_{[1/2,1]}$$.
  
-I didn't choose these densities (completely) at 'random', though (no pun intended). To be honest, I was trying to find ways to make the $$L^1$$ risk as bad as possible, using this inequality:
+I didn't choose these densities (completely) at 'random', though (no pun intended). To be honest, I was trying to find ways to make the $$L^1$$ risk as bad as possible, since the following inequality holds:
 
 $$\underset{f \in V_{\mathcal{I}}}{inf} \lvert \lvert p - f \rvert \rvert _1 \leq \frac{1}{2D} V_{[0,1]}(p)$$
 
-But let's leave that for another day...
+But let's leave that for another day. 
 
+### Simulations
+
+Let's get to coding !
+First I define some basic functions that I need to generate my n-sample.
+```Python
+#We start by fixing our sample size, which is n = 50 in this case
+#We then fix the random seed and generate random values in [0,1]
+n=50
+x=[]
+random.seed(2)
+for i in range(n):
+    x.append(random.random())
+```
+
+
+```Python
+
+```
 
