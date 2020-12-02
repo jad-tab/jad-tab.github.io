@@ -109,7 +109,7 @@ But let's leave that for another day.
 Let's get to coding !
 First I define some basic functions that I need to generate an n-sample.
 
-```Python3
+```python
 #Let's start by fixing our sample size, which is n = 50 in this case
 #I then fix the random seed and generate random values in [0,1]
 n=50
@@ -128,12 +128,11 @@ def piece(x):
 dsty = lambda x: piece(x)
 
 ```
-
 Now, let's present the values taken by the n-sample in a readable data-frame, according for each $$D$$:
 
 #(and thus according to each partition I_D)
 
-```Python
+```Python3
 
 
 ```
