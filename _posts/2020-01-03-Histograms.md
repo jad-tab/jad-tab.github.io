@@ -53,7 +53,7 @@ If we look at the previous bound, we see that  there has to be some kind of trad
 At this point, one can argue: "But ! I already know a rule of thumb to make this choice like the Sturge's rule which suggests to take a number of bins close to $$log_2(50) + 1$$ ! What's the point of this article!".
 You're right ! If you're in a rush, go ahead. But experimenting with histograms can be fun.
 
-Sturge's rule is a bit too general and depends only on the sample size and not on the particular distribution of the $$n$$-sample. The point of the method described here is to attempt to define a reasonable $$D$$ using information from the data.
+Sturge's rule is a bit too general and it does not seem to depend on the particular distribution of the $$n$$-sample. The point of the method described here is to attempt to define a reasonable $$D$$ using information extracted from the data.
 
 Let me now describe briefly the methodology I have followed and the attempted examples. Let's dive in !
 
