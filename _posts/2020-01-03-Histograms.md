@@ -63,7 +63,7 @@ $$pen(D) = D - 1 + (log(D))^{2.5}$$. The method suggests that the number of bins
 $$\boxed{\hat{D} = \underset{1 \leq D \leq n/log(n)}{argmax} (\sum_{I \in \mathcal{I_D}} N_I log(N_I D/n) - (D - 1 + (log(D)^{2.5})}$$
 
 For the sake of this experiment, I will use a few mock probability densities for the $$n$$-sample.
-Therefore, for any given density $$p$$, I'll first compute the $$\hat{D}$$ above (the one suggested by the procedure) and I'll then compare it with the value of $D$ which achieves $$M = \underset{1 \leq D \leq n/log(n)}{min} \int_0^1 \lvert p(x) - \hat{p}_D(x) \rvert dx$$. This will allow me to assess how this procedure measures up heuristically. Practically, if $$R$$:
+Therefore, for any given density $$p$$, I'll first compute the $$\hat{D}$$ above (the one suggested by the procedure) and I'll then compare it with the value of $$D$$ which achieves $$M = \underset{1 \leq D \leq n/log(n)}{min} \int_0^1 \lvert p(x) - \hat{p}_D(x) \rvert dx$$. This will allow me to assess how this procedure measures up heuristically. Practically, if $$R$$:
 
 $$R = \frac{\int_0^1|p(x) - \hat{p}_{\hat{D}}(x)|dx}{M}$$
 
@@ -77,4 +77,38 @@ Hopefully, this will "smooth out" the effects of randomness.
 
 
 
+## Generating an $n$-sample and choice of densities
 
+To generate an $$n$$-sample with density $p$ I'm going to use the fundamental theorem of simulation. There are much wittier ways to do that of course (Monte-Carlo methods...). But let's have some fun inverting functions. 
+Let us denote by $$U$$ a random variable with uniform distribution on $$[0 ; 1]$$.
+
+
+### [Theorem]: Simulation of an $n$-sample
+
+Let $$X$$ be a real-valued random variable with cumulative distribution function $$F(x) = \mathbb{P}(X \leq x)$$, we denote by $$F^{-1}$$ its generalized inverse defined as $$F^{-1}(u) = inf \{x : F(x) \geq u\}$$. We know that $$F^{-1}(U)$$ has the same distribution as $X$.
+
+
+Therefore, in order to generate an $$n$$-sample, it is sufficient to sample from a uniform random distribution and to invert the cumulative distribution function of each of the distributions we consider.
+
+Let us determine each cumulative distribution function $F_k$ and its inverse $F^{-1}_k$ for each density $p_k$: \\
+$p_1 = \frac{1}{2} \mathds{1}_{[0, 1/2)} + \frac{3}{2} \mathds{1}_{[1/2 ; 1]} \\
+p_2 = 2 \mathds{1}_{[0, 1/8]} + \frac{4}{5} \mathds{1}_{[1/8 ; 3/4)} + \mathds{1}_{[3/4; 1]} \\
+p_3 = \frac{1}{Arctan(1) (1 + x^2)} \mathds{1}_{[0,1]} $
+\\
+\\
+We have, respectively: \\
+$F_1(x) = \frac{x}{2} \mathds{1}_{[0,1/2])} + (\frac{3x}{2} - \frac{1}{2}) \mathds{1}_{[1/2, 1]} \\
+F_2(x) = 2x\mathds{1}_{[0,1/8)} + (\frac{4x}{5} + \frac{15}{100}) \mathds{1}_{[1/8, 3/4)} + x \mathds{1}_{[3/4, 1]}\\ F_3(x) = \frac{Arctan(x)}{Arctan(1)} \mathds{1}_{[0,1]}$
+\\ 
+\\
+Thus:
+$F_1^{-1}(u) = 2u \mathds{1}_{[0, 1/4]} + (\frac{2u}{3} + \frac{1}{3}) \mathds{1}_{[1/4, 1]}\\ F_2^{-1} (u) = \frac{u}{2} \mathds{1}_{[0, 1/4)} + (\frac{5u}{4} - \frac{3}{16})\mathds{1}_{[1/4, 3/4]} + u \mathds{1}_{(3/4, 1]}\\ F_3^{-1}(u) = tan(\frac{\pi}{4} u) \mathds{1}_{[0,1]}$
+\\
+\\
+
+We have also tried the two following densities (for which we will show the results we have obtained):\\
+$p_4(x) = 2(3x - floor(3x)) \mathds{1}_{[0,1]} \\ p_5(x) = \frac{\pi}{3} sin(2 \pi x)\mathds{1}_{[0,1/2]} + \frac{2 \pi}{3} sin(2\pi (x - \frac{1}{2})) \mathds{1}_{[1/2,1]}$. 
+
+Other possible interesting choices of underlying densities would be functions which "vary a lot" (high total variation) since by the course, we recall that:
+
+$$\underset{f \in V_{\mathcal{I}}}{inf} ||p - f||_1 \leq \frac{1}{2D} V_{[0,1]}(p)$$
