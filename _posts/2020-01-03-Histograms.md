@@ -210,14 +210,14 @@ p_chap = lambda x,D: histo(x,D,n)
 We can introduce the error function as follows:
 
 ```python
-#We introduce the function f as the difference between p(x) and p_D
+#Introduce the function f as the difference between p(x) and p_D
 f = lambda x,D: abs(dsty(x)-p_chap(x,D)) 
 ```
 
 And for more fun, I redefine the Riemann sums to compute the integrals that I need. 
 
 ```python
-#We quickly implement numerical integration by Riemann sums:
+#I quickly implement numerical integration by Riemann sums:
 def integrate(f, N,D):
     S=0
     for k in range(N):
@@ -252,7 +252,7 @@ M_min_arr=np.array(M_min)
 print(M_min_arr.argmin()+1)
 ```
 
-I find this:
+I find:
 
 ![alt]({{ site.url }}{{ site.baseurl }}/figures/cod3.PNG)
 
