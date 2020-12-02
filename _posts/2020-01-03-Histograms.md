@@ -3,12 +3,12 @@ title: "Building a good histogram Estimator"
 date: 2020-11-17
 tags: [Statistics, Histogram, Estimators]
 header:
- image: "/images/pytorch.jpg"
+ image: 
 excerpt: "Statistics, Histogram, Estimators"
 mathjax: "true"
 ---
 
-Let us take $(X_1, ..., X_n)$ an $n-$sample in $E = [0 , 1]$ with a density $p$ with respect to the Lebesgue measure $\lambda$. We will work in the case of a regular partition $\mathcal{I}$ of $E$ into $D$ equal sub-intervals.
+Let us take $$(X_1, ..., X_n)$$ an $n-$sample in $$E = [0 , 1]$$ with a density $p$ with respect to the Lebesgue measure $\lambda$. We will work in the case of a regular partition $$\mathcal{I}$$ of $E$ into $D$ equal sub-intervals.
 
 We would like to estimate $p$, and in the course we have studied histogram estimators; The histogram of $p$ based on the partition $\mathcal{I}$ is the random function:
 $$\hat{p}_{\mathcal{I}}(x) = \sum_{I \in \mathcal{I}} \frac{N_I}{n \lambda(I)} \mathds{1}_{I}(x)$$ where $N_I$ is 'number' of data which fall into $I$, more precisely: $N_I = \sum_{i=1}^n \mathds{1}_{X_i \in I}$. Since we have chosen a regular partition, we have in particular, for all $I \in \mathcal{I}, \lambda(I) = \frac{1}{D}$.
