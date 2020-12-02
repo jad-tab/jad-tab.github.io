@@ -90,8 +90,8 @@ Let $$X$$ be a real-valued random variable with cumulative distribution function
 
 Therefore, in order to generate an $$n$$-sample, it is sufficient to sample from a uniform random distribution and to invert the cumulative distribution function of each of the distributions we consider. Let me first show you the distributions I have chosen to try out. 
 
-$$p_1 = \frac{1}{2} 1_{[0, 1/2)} + \frac{3}{2} 1_{[1/2 ; 1]} \\
-p_2 = 2 1_{[0, 1/8]} + \frac{4}{5} 1_{[1/8 ; 3/4)} + 1_{[3/4; 1]} \\
+$$p_1 = \frac{1}{2} 1_{[0, 1/2)} + \frac{3}{2} \times 1_{[1/2 ; 1]} \\
+p_2 = 2 \times 1_{[0, 1/8]} + \frac{4}{5} \times 1_{[1/8 ; 3/4)} + 1_{[3/4; 1]} \\
 p_3 = \frac{1}{Arctan(1) (1 + x^2)} 1_{[0,1]} $$
 
 $$p_4(x) = 2(3x - floor(3x)) 1_{[0,1]}\\
