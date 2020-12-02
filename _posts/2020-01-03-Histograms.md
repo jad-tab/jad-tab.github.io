@@ -21,15 +21,15 @@ In this article, I experiment with a procedure described by Birgé and Rozenholc
 
 Let us take $$(X_1, ..., X_n)$$ an $$n-$$sample in a space $$E = [0 , 1]$$. Let us suppose they are sampled from some density $$p$$ with respect to the Lebesgue measure $$\lambda$$. I will work in the case of a regular partition $$\mathcal{I}$$ of $$E$$ into $$D$$ equal sub-intervals. This $$D$$ variable is the number of bins we would like to use, in practice.
 
-We would like to estimate $$p$$ using a histogram. The histogram of $p$ based on the partition $$\mathcal{I}$$ is the random function:
+We would like to estimate $$p$$ using a histogram. The histogram of $$p$$ based on the partition $$\mathcal{I}$$ is the random function:
 	
 $$\hat{p}_{\mathcal{I}}(x) = \sum_{I \in \mathcal{I}} \frac{N_I}{n \lambda(I)} \mathds{1}_{I}(x)$$ 
 
 where $$N_I$$ is 'number' of data which fall into $$I$$, more precisely: $$N_I = \sum_{i=1}^n \mathds{1}_{X_i \in I}$$. Since we have chosen a regular partition, we have in particular, for all $$I \in \mathcal{I}, \lambda(I) = \frac{1}{D}$$. 
 
-Finally, let us denote by $$V_{\mathcal{I}}$$ the linear space of step functions: $$\sum_{I \in \mathcal{I}} a_{I} \mathds{1}_I$ where $a_I \in \mathbb{R}$$. 
+Finally, let us denote by $$V_{\mathcal{I}}$$ the linear space of step functions: $$\sum_{I \in \mathcal{I}} a_{I} \mathds{1}_I$$ where $$a_I \in \mathbb{R}$$. 
 
-Let's remember that the $$L^1$$-risk of the histogram can be expressed as:
+Let's remember that the $$L^1$$-risk of the histogram is often defined as:
 $$R_1 = \mathbb{E}_p(||p - p_{\mathcal{I}}||_1) $$ 
 
 Moreover, we can establish the following bound (for regular partitions into $$D$$ intervals):
