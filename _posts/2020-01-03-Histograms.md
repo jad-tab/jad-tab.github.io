@@ -15,7 +15,8 @@ Histograms are a cool way to visualize data distributions:
 
 We could choose how we want our histogram to be plotted to draw insight from the data at hand. But how many bins should we use for a histogram in practice ?
 
-In this article, I experiment with a procedure discovered and published by Birgé and Rozenholc that allows us to select a "good" number of bins. 
+In this article, I experiment with a procedure discovered and published by Birgé and Rozenholc that allows us to select a "good" number of bins. Here's the [article](https://hal.archives-ouvertes.fr/hal-00712349)
+
 
 ## Notations and mathematical context
 
