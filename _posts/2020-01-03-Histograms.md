@@ -131,10 +131,9 @@ dsty = lambda x: piece(x)
 ```
 Now, let's present the values taken by the n-sample in a readable data-frame, for each $$D$$:
 
-#(and thus according to each partition I_D)
 
 ```python
-#We shall now present the values taken by the n-sample in a data-frame, according to each of the values of D
+#Present the values taken by the n-sample in a data-frame, according to each of the values of D
 #(and thus according to each partition I_D)
 
 x_=pd.DataFrame(x)
