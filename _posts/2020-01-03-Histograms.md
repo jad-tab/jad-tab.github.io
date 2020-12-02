@@ -53,3 +53,11 @@ Let me now describe briefly the methodology I have followed and the attempted ex
 # Methodology
 
 
+For all $$D \geq 1$$, let's define the log-likelihood at $$\hat{p}_D$$ based on the observations $$\mathbb{X} = (X_1, .... X_n)$$ by: $$L_{\mathbb{X}}(D) = \underset{I \in I_D}{\sum} N_I log(N_I \frac{ D }{n})$$
+
+The heart of the procedure is to introduce a penalty function, defined for each integer $$D>0$$ as: 
+$$pen(D) = D - 1 + (log(D))^{2.5}$$. The method suggests that the value of $\hat{D}$ to choose is: 
+
+ $$\boxed{\hat{D} = \underset{1 \leq D \leq n/log(n)}{argmax} (\sum_{I \in \mathcal{I_D}} N_I log(N_I D/n) - (D - 1 + (log(D)^{2.5})}$$
+
+
