@@ -34,10 +34,10 @@ $$R_1 = \mathbb{E}_p(||p - p_{\mathcal{I}}||_1) $$
 
 Moreover, we can establish the following bound (for regular partitions into $$D$$ intervals):
 
-$$\mathbb{E}_p(||p - p_{\mathcal{I}}||_1) \leq 2  \underset{f \in V_{\mathcal{I}}}{ inf} ||p - f||_1 + \sqrt{\frac{D-1}{n}}$$  
+$$\mathbb{E}_p(||p - p_{\mathcal{I}}||_1) \leq 2  \underset{f \in V_{\mathcal{I}}}{ inf} ||p - f||_{1} + \sqrt{\frac{D-1}{n}}$$.
 
-
-Suppose we would like to find a good histogram $$\bar{p}$$ in $$V_{\mathcal{I}}$$ such that $||p - \bar{p}_D||_1$ is as small as possible. The classical approach (in case we know $p$) would be to compute for each choice of partition $\mathcal{I}$ (depending on $D$), the quantity $\int_{0}^1|p(x) - \hat{p}_D(x)|dx$ and therefore to deduce the value of $D$ which achieves this minimum. This seems a bit expensive, computationally.
+Suppose we would like to find a good histogram $$\bar{p}$$ in $$V_{\mathcal{I}}$$ such that $$||p - \bar{p}_D||_1$$ is as small as possible. The classical approach (in case we know $$p$$) would be to compute for each choice of partition $$\mathcal{I}$$ (depending on $$D$$), the quantity $$\int_{0}^1|p(x) - \hat{p}_D(x)|dx$$ and therefore to deduce the value of $$D$$ which achieves this minimum. 
+This seems a bit expensive, computationally...
 
 If we look at the previous bound, we see that  there has to be some kind of tradeoff between the bias and the variance: we should not choose a $$D$$ which is too large. 
 
