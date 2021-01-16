@@ -20,10 +20,7 @@ a [Kaggle Chest x-ray dataset](https://www.kaggle.com/paultimothymooney/chest-xr
 
 ## Setting up the GPU on Amazon AWS
 
-The first step was to setup a GPU: though not exactly strictly necessary, I wanted to learn how to setup an instance on Amazon AWS.
-
-
-
+The first step was to setup a GPU: though not exactly strictly necessary, I wanted to learn how to setup an instance on Amazon AWS. I selected a p2.xlarge instance GPU, to hopefully speed up some computations.
 ![alt]({{ site.url }}{{ site.baseurl }}/figures2/instance.png)
 
 
