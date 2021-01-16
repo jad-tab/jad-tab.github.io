@@ -44,7 +44,7 @@ The Naive Bayes parametric model assumes (naively) that each feature $$x_j$$ is 
 $$ p(x_j | x_k) = p(x_j) $$
 
 $$p(x) = p(x_1, ..., x_K)
-= p(x_2, ..., x_K|x_1) p(x_1)
+= p(x_2, ..., x_K|x_1) p(x_1)$$
 
 =  
 
