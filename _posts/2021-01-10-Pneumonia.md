@@ -220,11 +220,13 @@ Though the dataset was quite modest, I was able to get some pretty good results.
 
 ### Visualizing some layer activations 
 
-I would like to end this article by visualizing some activated layers and see what they have 'learned'. 
+I would like to end this article by visualizing the activation of some convolutional layers of the network to see what it has learned.
 
 
 
-![alt]({{ site.url }}{{ site.baseurl }}/figures2/cnnk2.JPG)
-
+This is the activation of the first and third channels of the first convolutional layer for an xray I chose at random
 ![alt]({{ site.url }}{{ site.baseurl }}/figures2/cnnk1.JPG)
+
+
+![alt]({{ site.url }}{{ site.baseurl }}/figures2/cnnk3.JPG)
 
