@@ -28,5 +28,9 @@ $$L(\theta, x) = p_{\theta}(x) $$
 Now, if we consider the whole dataset $$X$$ we can define:
 $$ L(\theta, X) = \Pi_{x \in X}   p_{\theta}(x) $$
 
+The interesting bit is when we consider $$\theta$$ for which $$L(\theta, X)$$ is maximum. That is precisely the definition of the maximum likelihood estimator $$\hat{\theta}$$:
+
+$$\hat{\theta} = argmax_{\theta}  L(\theta, X) $$
+
 
 ## 
