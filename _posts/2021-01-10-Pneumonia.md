@@ -114,13 +114,15 @@ for fname in fnames:
     dst = os.path.join(test_pneum_dir, fname)
     shutil.copyfile(src,dst)
 
-
 ```
 
+Since the dataset contains relatively few samples, I'm going to resort to data augmentation, using the ImageDataGenerator
 
 
+```python
 
 
+```
 
 
 
