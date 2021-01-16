@@ -70,14 +70,11 @@ os.mkdir(test_norm_dir)
 
 test_pneum_dir = os.path.join(test_dir, 'pneum')
 os.mkdir(test_pneum_dir)
-
-
 ```
 
 Now that the directories are created, I proceed with filling them with corresponding xrays.
 
 ```python
-
 fnames = ['norm{}.jpg'.format(i) for i in range(1,949)]
 for fname in fnames:
     src = os.path.join(original_dataset_dir, 'normal', fname)
@@ -113,25 +110,40 @@ for fname in fnames:
     src = os.path.join(original_dataset_dir, 'pneum', fname)
     dst = os.path.join(test_pneum_dir, fname)
     shutil.copyfile(src,dst)
-
 ```
-
-Since the dataset contains relatively few samples, I'm going to resort to data augmentation, using the ImageDataGenerator
-
-
-```python
-
-
-```
-
 
 
 
 ### A data augmentation technique 
 
 
+Since the dataset contains relatively few samples, I'm going to resort to data augmentation, using the ImageDataGenerator. This technique allows one to obtain an augmented dataset by performing random geometric transforms to the data.
+
+
+```python
+from keras import layers
+from keras import models 
+from keras import optimizers
+from keras.preprocessing.image import ImageDataGenerator
+
+datagen = ImageDataGenerator(
+    rotation_range=50,
+    width_shift_range=0.2,
+    height_shift_range=0.2,
+    shear_range=0.2,
+    zoom_range=0.2,
+    horizontal_flip=True,
+    fill_mode='nearest')
+```
+
+For each xray that passes through, it will be rotated by a random number of degrees (between 0 and 40 degrees here), horizontal_flip means the xray might be randomly flipped. Shearing and zooming, shifting the xrays allows me to obtain more data artificially.
+
+While this may not be enough to stage off overfitting, a dropout layer will be included in my architecture (see below).
 
 
 
 ## The ConvNet Architecture
+
+I'm going to use a common convolutional neural network architecture.
  
+![alt]({{ site.url }}{{ site.baseurl }}/figures2/architecture.png)
