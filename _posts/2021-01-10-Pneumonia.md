@@ -201,5 +201,12 @@ For the sake of comparing, I ran the training on my CPU and compared it to Amazo
 
 ![alt]({{ site.url }}{{ site.baseurl }}/figures2/slow.PNG)
 
-
 ![alt]({{ site.url }}{{ site.baseurl }}/figures2/fast.PNG)
+
+
+## Model performance through training/validation loss/accuracy:
+
+Here are the results obtained for this model:
+
+
+![alt]({{ site.url }}{{ site.baseurl }}/figures2/cnnpneumonia.JPG)
