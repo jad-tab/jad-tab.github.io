@@ -1,7 +1,7 @@
 ---
 title: "Probabilistic generative models: an elementary model"
 date: 2020-01-08
-tags: [Naive Bayes, Maximum Likelihood Estimator, Likelihood]
+tags: [statistics, Naive Bayes, Maximum Likelihood Estimator, Likelihood]
 header:
  image: 
 excerpt: "Sampling from a distribution using Naive Bayes: helping the animal shelter prepare for the summer"
@@ -14,7 +14,7 @@ Let us go back to the animal shelter we once helped in another article. Suppose 
 ![alt]({{ site.url }}{{ site.baseurl }}/figures2/groom.png)
 
 This is equivalent to ask whether we can generate some new samples based on the ones we already have to 'create' some new, unseen animals. We would of course like these generated animals to be representative of reality, ie. to be somewhat similar to the ones we have already observed. 
-I'm going to define these notions more rigorously using the statistical framework. Then, I will apply this into
+I'm going to define these notions more rigorously using the statistical framework. Then, I will apply this to the already cleaned dataset of the shelter animal outcomes.
 
 
 ## Statistical framework
