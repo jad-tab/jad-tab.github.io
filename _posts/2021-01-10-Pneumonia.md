@@ -4,7 +4,7 @@ date: 2020-04-06
 tags: [Deep Learning, Classification, backpropagation, accuracy]
 header:
  image: 
-excerpt: "Building and deploying a convolutional neural network architecture to classify patient chet x-ray scans (pneumonia vs. healthy) using an Amazon AWS GPU.
+excerpt: "Building and deploying a convolutional neural network architecture to classify patient chet x-ray scans (pneumonia vs. healthy) using an Amazon AWS GPU."
 mathjax: "true"
 ---
 
