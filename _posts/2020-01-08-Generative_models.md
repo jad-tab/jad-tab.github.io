@@ -33,4 +33,9 @@ The interesting bit is when we consider $$\theta$$ for which $$L(\theta, X)$$ is
 $$\hat{\theta} = argmax_{\theta}  L(\theta, X) $$
 
 
-## 
+
+We would like our model to give more weight to areas of the sample space that it believes are more likely, rather than just giving equal weights to the
+## Naive Bayes
+
+
+
