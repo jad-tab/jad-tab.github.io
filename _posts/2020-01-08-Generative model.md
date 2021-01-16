@@ -8,7 +8,13 @@ excerpt: "Sampling from a distribution using Naive Bayes: helping the animal she
 mathjax: "true"
 ---
 
-Let us go back to the animal shelter we have helped by predicting the animals' outcomes. Suppose now we would like to help the shelter prepare for the next season:  how can we predict what the arriving animals might look like in order to best prepare the shelter (buying more cat/dog food, buying more grooming products for furry animals, etc) ?
+Let us go back to the animal shelter we once helped in another article. Suppose we would now like to help that shelter better prepare for the next season:  how can we predict what the arriving animals might look like in order to be prepared (should we buy more cat or dog food this summer ? should we buy more grooming accessories for furry cats or more toys for dogs ?). 
+
+
+![alt]({{ site.url }}{{ site.baseurl }}/figures2/groom.png)
+
+This is equivalent to ask whether we can generate some new samples based on the ones we already have to 'create' some new, unseen animals. We would of course like these generated animals to be representative of reality, ie. to be somewhat similar to the ones we have already observed. 
+I'll first start by recalling
 
 ## Statistical framework
 Let $$p_{\theta}(x)$$ be a family of density functions that can be described using a finite set of parameters $$\theta$$. For example, taking the gaussian densities would require us to specify $$\theta = (\mu ; \sigma)$$ to be uniquely specified. 
