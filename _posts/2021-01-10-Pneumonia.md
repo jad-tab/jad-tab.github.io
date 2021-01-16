@@ -72,8 +72,56 @@ test_pneum_dir = os.path.join(test_dir, 'pneum')
 os.mkdir(test_pneum_dir)
 
 
+```
+
+Now that the directories are created, I proceed with filling them with corresponding xrays.
+
+```python
+
+fnames = ['norm{}.jpg'.format(i) for i in range(1,949)]
+for fname in fnames:
+    src = os.path.join(original_dataset_dir, 'normal', fname)
+    dst = os.path.join(train_norm_dir, fname)
+    shutil.copyfile(src,dst)
+    
+fnames = ['norm{}.jpg'.format(i) for i in range(949, 1265)]
+for fname in fnames:
+    src = os.path.join(original_dataset_dir, 'normal', fname)
+    dst = os.path.join(validation_norm_dir, fname)
+    shutil.copyfile(src,dst)
+    
+fnames = ['norm{}.jpg'.format(i) for i in range(1265, 1581)]
+for fname in fnames:
+    src = os.path.join(original_dataset_dir, 'normal', fname)
+    dst = os.path.join(test_norm_dir, fname)
+    shutil.copyfile(src,dst)
+
+fnames = ['pneum{}.jpg'.format(i) for i in range(1,949)]
+for fname in fnames:
+    src = os.path.join(original_dataset_dir, 'pneum', fname)
+    dst = os.path.join(train_pneum_dir, fname)
+    shutil.copyfile(src,dst)
+    
+fnames = ['pneum{}.jpg'.format(i) for i in range(949, 1265)]
+for fname in fnames:
+    src = os.path.join(original_dataset_dir, 'pneum', fname)
+    dst = os.path.join(validation_pneum_dir, fname)
+    shutil.copyfile(src,dst)
+    
+fnames = ['pneum{}.jpg'.format(i) for i in range(1265, 1581)]
+for fname in fnames:
+    src = os.path.join(original_dataset_dir, 'pneum', fname)
+    dst = os.path.join(test_pneum_dir, fname)
+    shutil.copyfile(src,dst)
+
 
 ```
+
+
+
+
+
+
 
 
 
