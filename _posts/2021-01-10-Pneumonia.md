@@ -171,7 +171,7 @@ model.compile(loss='binary_crossentropy', optimizer=optimizers.RMSprop(lr=1e-4),
 ## Training the ConvNet
 
 
-The test and training set are augmented but I don't do that for the validation set. I resize all images to 150x150.
+The test and training set are augmented but I don't do that for the validation set. Images are resized to a standard 150x150. 
 
 ```python
 test_datagen = ImageDataGenerator(rescale=1./255)
@@ -194,7 +194,12 @@ history = model.fit_generator(
     epochs = 100,
     validation_data = validation_generator,
     validation_steps = 50)
-
-
-
 ```
+
+For the sake of comparing, I ran the training on my CPU and compared it to Amazon's GPU. Though nothing was done to further optimize the code on tensorflow, there was already a difference in performance:
+
+
+![alt]({{ site.url }}{{ site.baseurl }}/figures2/slow.PNG)
+
+
+![alt]({{ site.url }}{{ site.baseurl }}/figures2/fast.PNG)
