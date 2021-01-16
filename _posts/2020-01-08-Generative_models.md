@@ -14,7 +14,8 @@ Let us go back to the animal shelter we once helped in another article. Suppose 
 ![alt]({{ site.url }}{{ site.baseurl }}/figures2/groom.png)
 
 This is equivalent to ask whether we can generate some new samples based on the ones we already have to 'create' some new, unseen animals. We would of course like these generated animals to be representative of reality, ie. to be somewhat similar to the ones we have already observed. 
-I'll first start by recalling
+I'm going to define these notions more rigorously using the statistical framework. Then, I will apply this into
+
 
 ## Statistical framework
 Let $$p_{\theta}(x)$$ be a family of density functions that can be described using a finite set of parameters $$\theta$$. For example, taking the gaussian densities would require us to specify $$\theta = (\mu ; \sigma)$$ to be uniquely specified. 
