@@ -13,11 +13,12 @@ Let us go back to the animal shelter we once helped in another article. Suppose 
 
 ![alt]({{ site.url }}{{ site.baseurl }}/figures2/groom.png)
 
-This is equivalent to ask whether we can generate some new samples based on the ones we already have to 'create' some new, unseen animals. We would of course like these generated animals to be representative of reality, ie. to be somewhat similar to the ones we have already observed. 
+This is equivalent to ask whether we can generate some new samples based on the ones we already have to 'create' some new, unseen animals. We would of course like these generated animals to be representative of reality ie. to be somewhat similar to the ones we have already observed, so not completely random. 
 I'm going to define these notions more rigorously using the statistical framework. Then, I will apply this to the already cleaned dataset of the shelter animal outcomes.
 
 
-## Statistical framework
+## Statistical framework for parametric estimation
+
 Let $$p_{\theta}(x)$$ be a family of density functions that can be described using a finite set of parameters $$\theta$$. For example, taking the gaussian densities would require us to specify $$\theta = (\mu ; \sigma)$$ to be uniquely specified. 
 
 The likelihood $$L(\theta | x)$$ of $$\theta$$ is a function that measures the plausibility of $$\theta$$ given some observed data point $$x$$.
@@ -25,7 +26,7 @@ Of course, it makes sense to define it as:
 $$L(\theta, x) = p_{\theta}(x) $$
 
 Now, if we consider the whole dataset $$X$$ we can define:
-$$ L(\theta, X) = \Pi_{x \in X} p_{\theta}(x) $$
+$$ L(\theta, X) = \Pi_{x \in X}   p_{\theta}(x) $$
 
 
 ## 
