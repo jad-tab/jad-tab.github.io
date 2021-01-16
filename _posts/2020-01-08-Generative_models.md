@@ -21,8 +21,10 @@ I'm going to define these notions more rigorously using the statistical framewor
 Let $$p_{\theta}(x)$$ be a family of density functions that can be described using a finite set of parameters $$\theta$$. For example, taking the gaussian densities would require us to specify $$\theta = (\mu ; \sigma)$$ to be uniquely specified. 
 
 The likelihood $$L(\theta | x)$$ of $$\theta$$ is a function that measures the plausibility of $$\theta$$ given some observed data point $$x$$.
-Now, if we consider the whole dataset $$X$$ we can define:
+Of course, it makes sense to define it as:
+$$L(\theta, x) = p_{\theta}(x) $$
 
+Now, if we consider the whole dataset $$X$$ we can define:
 $$ L(\theta, X) = \Pi_{x \in X} p_{\theta}(x) $$
 
 
