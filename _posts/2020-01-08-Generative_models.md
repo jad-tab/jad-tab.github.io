@@ -41,8 +41,12 @@ Since we would like the model to give more weight to areas of the sample space t
 
 The Naive Bayes parametric model assumes (naively) that each feature $$x_j$$ is independent from all other features $$x'_j$$. 
 
+$$ p(x_j | x_k) = p(x_j) $$
 
-p(x_j | x_k) = p(x_j) 
+$$p(x) = p(x_1, ..., x_K)
+= p(x_2, ..., x_K|x_1) p(x_1)
+
+=  
 
 
 
