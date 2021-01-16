@@ -12,9 +12,9 @@ Let's take a look at the following x-rays:
 
 ![alt]({{ site.url }}{{ site.baseurl }}/figures2/pneumvshealth.png)
 
-Identifying which chest x-ray reveals pneumonia in the patient may prove difficult for the untrained eye (like mine!). Between 2017 and 2018, there was a 30% increase in job openings for radiologists - according to the Association of American Medical Colleges (AAMC). And now with Covid-19, it may be even more.
+Identifying which chest x-ray reveals pneumonia in the patient may prove difficult for the untrained eye (like mine!). In 2017-2018, there was a 30% increase in job openings for radiologists - according to the Association of American Medical Colleges (AAMC). And now with the coronavirus, it might have become even more.
 
-In this article, I build a basic convolutional neural network that classifies such x-rays into either 'pneumonia' or 'healthy'. I have used data from the 
+In this article, I build a convolutional neural network that classifies such x-rays into either 'pneumonia' or 'healthy'. I have used data from 
 a [Kaggle Chest x-ray dataset](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia) to train the model. I'd also like to explicitly refer to an amazing book that has taught me everything on Deep Learning (Deep Learning on Python by François Chollet).
 
 
@@ -30,90 +30,28 @@ Running on windows, I've installed and setup Putty. The trickiest part for me wa
 
 
 
+## 
 
 
 
-
-
-
-
-## Dealing with missing values
-
-
-
-### Dealing with the Seasons
- 
+### 
  
 
 ```python
-complete_data['DateTime'] = pd.to_datetime(complete_data['DateTime'], format='%Y-%m-%d %H:%M:%S')
-complete_data['FractionOfYearFromBeginningOfYear'] = complete_data['DateTime'].map(
-    lambda x: (x-pd.Timestamp(year=x.year, month=1, day=1)).days/365
-)
-complete_data['FractionOfDay'] = complete_data['DateTime'].map(lambda x: x.hour/24)
-
-complete_data = complete_data.loc[:, complete_data.columns != 'DateTime']
 
 ```
 
-
-![alt]({{ site.url }}{{ site.baseurl }}/figures/algo4.PNG)
 
 ### Converting the Animal Type Column's labels: 
 
-A quick check of the 'AnimalType' column allows us to determine that we're classifying cats and dogs. 
-I then convert the True/False boolean mask into "0"'s and "1"'s.
-
-```python
-
-complete_data['AnimalType'].unique()
-
-complete_data['AnimalType'] = (complete_data['AnimalType']=='Dog').astype(np.int)
-
-```
+ 
 
 ### Cleaning the messy 'AgeuponOutcome' column:
-
-In the Ageuponoutcome column there are numerical values and different units: years, weeks. Furthermore sometimes for the same unit we have a singular or a plural. I'm going to implement a "period string to years" function as follows:
+ 
 * First, split the column at the space
 * Take the resulting integer n value as well as the associated string (the unit)
 * Add an -s to this string  (make all units in plural)
 * Convert the associated n to years (by distinguishing cases where string is years, months, weeks or days) using the above conventions
-
-
-
-
-
-
-```python
-
-def period_str_to_years(s):
-    if pd.isnull(s):
-        return None
-    n, unit = s.split(' ')
-    n = int(n)
-    if unit[-1] != 's':
-        unit = unit + 's'
-    if unit == 'years':
-        return n
-    if unit == 'months':
-        return n/12
-    if unit == 'weeks':
-        return n/52
-    if unit == 'days':
-        return n/365
-    return None
-
-#Apply the function str_to_years to our AgeuponOutcome column and delete it subsequently)
-complete_data['AgeInYears'] = complete_data['AgeuponOutcome'].map(period_str_to_years)
-complete_data = complete_data.loc[:, complete_data.columns != 'AgeuponOutcome']
-complete_data.dropna(subset=('AgeInYears',), inplace=True)
-
-```
-
-We can now see each animal's age in years:
-
-![alt]({{ site.url }}{{ site.baseurl }}/figures/algo5.PNG)
 
 
 
