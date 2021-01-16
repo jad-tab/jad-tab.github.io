@@ -207,8 +207,9 @@ For the sake of comparing, I ran the training on my CPU and compared it to Amazo
 ![alt]({{ site.url }}{{ site.baseurl }}/figures2/fast.PNG)
 
 
-## Model performance through training/validation loss/accuracy:
+## Exploring the trained model
 
+### Performance measures of the model
 Here are the results obtained for this basic model:
 
 
@@ -216,4 +217,14 @@ Here are the results obtained for this basic model:
 
 Though the dataset was quite modest, I was able to get some pretty good results. But I can't help but notice the large leaps that aren't necessarily expected: it might be interesting to see if these performance measures could be further improved.
 
+
+### Visualizing some layer activations 
+
+I would like to end this article by visualizing some activated layers and see what they have 'learned'. 
+
+
+
+![alt]({{ site.url }}{{ site.baseurl }}/figures2/cnnk2.JPG)
+
+![alt]({{ site.url }}{{ site.baseurl }}/figures2/cnnk1.JPG)
 
