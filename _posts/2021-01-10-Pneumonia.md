@@ -1,6 +1,6 @@
 ---
 title: "Building a convolutional neural network to identify pneumonia"
-date: 2020-04-06
+date: 2021-01-10
 tags: [Deep Learning, Classification, backpropagation, accuracy]
 header:
  image: 
