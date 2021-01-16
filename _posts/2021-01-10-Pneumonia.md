@@ -166,5 +166,35 @@ model.add(layers.Dense(512, activation='relu'))
 model.add(layers.Dense(1, activation='sigmoid'))
 
 model.compile(loss='binary_crossentropy', optimizer=optimizers.RMSprop(lr=1e-4), metrics=['acc'])
+```
+
+## Training the ConvNet
+
+
+The test and training set are augmented but I don't do that for the validation set. I resize all images to 150x150.
+
+```python
+test_datagen = ImageDataGenerator(rescale=1./255)
+
+train_generator = train_datagen.flow_from_directory(
+    train_dir,
+    target_size=(150,150),
+    batch_size = 32,
+    class_mode = 'binary')
+
+validation_generator = test_datagen.flow_from_directory(
+    validation_dir,
+    target_size = (150,150),
+    batch_size = 32,
+    class_mode = 'binary')
+
+history = model.fit_generator(
+    train_generator,
+    steps_per_epoch = 100,
+    epochs = 100,
+    validation_data = validation_generator,
+    validation_steps = 50)
+
+
 
 ```
