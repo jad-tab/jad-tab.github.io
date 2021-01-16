@@ -3,7 +3,7 @@ title: "Building a simple generative model"
 date: 2020-01-08
 tags: [Naive Bayes, Maximum Likelihood Estimator, Likelihood]
 header:
- image: ![alt]({{ site.url }}{{ site.baseurl }}/figures/histogram.JPG)
+ image: 
 excerpt: "Sampling from a distribution using Naive Bayes: a way to come up with new ideas"
 mathjax: "true"
 ---
