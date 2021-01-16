@@ -14,14 +14,17 @@ Let's take a look at the following x-rays:
 
 Identifying which chest x-ray reveals pneumonia in the patient may prove difficult for the untrained eye (like mine!). Between 2017 and 2018, there was a 30% increase in job openings for radiologists - according to the Association of American Medical Colleges (AAMC). And now with Covid-19, it may be even more.
 
-In this article, I will build a basic convolutional neural network that classifies such xrays into either 'pneumonia' or 'healthy'. I have used data from the 
-a [Kaggle Chest x-ray dataset](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia) to train the architecture. I'd also like to explicitly refer to an amazing book that has taught me everything I need on Deep Learning (Deep Learning on Python by François Chollet).
+In this article, I build a basic convolutional neural network that classifies such x-rays into either 'pneumonia' or 'healthy'. I have used data from the 
+a [Kaggle Chest x-ray dataset](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia) to train the model. I'd also like to explicitly refer to an amazing book that has taught me everything on Deep Learning (Deep Learning on Python by François Chollet).
+
+
+## Setting up the GPU on Amazon AWS
+
+The first step was to setup a GPU: though not exactly strictly necessary, I wanted to learn how to setup an instance on Amazon AWS.
 
 
 
-
-
-
+![alt]({{ site.url }}{{ site.baseurl }}/figures2/instance.png)
 
 
 
