@@ -22,7 +22,7 @@ a [Kaggle Chest x-ray dataset](https://www.kaggle.com/paultimothymooney/chest-xr
 
 The first step was to setup a GPU: though not exactly strictly necessary, I wanted to learn how to setup an instance on Amazon AWS. I selected a p2.xlarge instance, to hopefully speed up some computations on GPU.
 
-![alt]({{ site.url }}{{ site.baseurl }}/figures2/instance.png)
+![alt]({{ site.url }}{{ site.baseurl }}/figures2/instance.PNG)
 
 Running on Windows, I've installed and setup Putty. The trickiest part for me was to learn to forward some ports to be able to run Jupyter Notebooks on my browser, but that was not very difficult as it could be easily done here:
 
