@@ -223,15 +223,15 @@ Though the dataset was quite modest, I was able to get some pretty good results.
 ### Visualizing some layer activations 
 
 I would like to end this article by visualizing the activation of some convolutional layers of the network to see what it has learned.
-
-
-
-This is the activation of the first and third channels of the first convolutional layer for an xray I selected:
+These are the activations of the first and third channels of the first convolutional layer for an xray I selected:
 
 ![alt]({{ site.url }}{{ site.baseurl }}/figures2/cnnk1.JPG)
+
 This channel appears to encode the general thoracic cavity shape.
 
+
 ![alt]({{ site.url }}{{ site.baseurl }}/figures2/cnnk3.JPG)
+
 This channel appears to encode the heart's outlines.
 
 
