@@ -238,6 +238,6 @@ This channel appears to encode the heart's outlines.
 
 ## Takeaway
 
-A simple deep learning model has allowed me to identify pneumonia xrays from the comfort of my home. While  more can be done to improve this model, it was a fun test run for me. Maybe I could apply this same model for covid-19 cases, once some data is available ?
+A simple deep learning model has allowed me to identify pneumonia xrays from the comfort of my home.  Maybe I could attempt something similar for covid-19 patients, once some data is available ?
 
 
