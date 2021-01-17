@@ -14,7 +14,7 @@ Let's take a look at the following x-rays:
 
 Can you guess which patient has pneumonia ? I could not... but maybe my computer can be trained to become a part time radiologist ?
 
-In 2017-2018, there was a 30% increase in job openings for radiologists - according to the Association of American Medical Colleges (AAMC). And now with the coronavirus, it might have become even more.
+In 2017-2018, there was a 30% increase in job openings for radiologists - according to the Association of American Medical Colleges (AAMC). 
 
 In this article, I build a convolutional neural network that classifies such x-rays into either 'pneumonia' or 'healthy' on Keras. I have used data from 
 a [Kaggle Chest x-ray dataset](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia) to train the model. I'd also like to explicitly refer to an amazing book that has taught me everything on Deep Learning (Deep Learning on Python by François Chollet).
