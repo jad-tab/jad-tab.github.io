@@ -20,6 +20,8 @@ In this article, I build a convolutional neural network that classifies such x-r
 a [Kaggle Chest x-ray dataset](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia) to train the model. I'd also like to explicitly refer to an amazing book that has taught me everything on Deep Learning (Deep Learning on Python by François Chollet).
 
 
+
+* This is
 {:toc}
 
 ## Setting up the GPU on Amazon AWS 
