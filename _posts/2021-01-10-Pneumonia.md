@@ -20,6 +20,8 @@ In this article, I build a convolutional neural network that classifies such x-r
 a [Kaggle Chest x-ray dataset](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia) to train the model. I'd also like to explicitly refer to an amazing book that has taught me everything on Deep Learning (Deep Learning on Python by François Chollet).
 
 
+{:toc}
+
 ## Setting up the GPU on Amazon AWS 
 
 The first step was to setup a GPU: though not exactly strictly necessary, I wanted to learn how to setup an instance on Amazon AWS. I selected a p2.xlarge instance, to hopefully speed up some computations on GPU.
@@ -224,9 +226,19 @@ I would like to end this article by visualizing the activation of some convoluti
 
 
 
-This is the activation of the first and third channels of the first convolutional layer for an xray I chose at random
-![alt]({{ site.url }}{{ site.baseurl }}/figures2/cnnk1.JPG)
+This is the activation of the first and third channels of the first convolutional layer for an xray I selected:
 
+![alt]({{ site.url }}{{ site.baseurl }}/figures2/cnnk1.JPG)
+This channel appears to encode the general thoracic cavity shape.
 
 ![alt]({{ site.url }}{{ site.baseurl }}/figures2/cnnk3.JPG)
+This channel appears to encode the heart's outlines.
+
+
+
+
+## Takeaway
+
+A simple deep learning model has allowed me to identify pneumonia xrays from the comfort of my home. While  more can be done to improve this model, it was a fun test run for me. Maybe I could apply this same model for covid-19 cases, once some data is available ?
+
 
