@@ -43,7 +43,22 @@ and last but not least:
 
 ## Multivariate polynomial theory (summary)
 
-### Analogy with abstract algebra and differences
+This section is my modest attempt to sketch and summarize a whole theory  - I apologize in advance to any algebraists who might not appreciate it. Please refer to the book above for more rigor and details.
+
+### Analogy with linear algebra and critical differences
+Let us consider the following system of equations:
+
+$$
+\left\{ 
+\begin{array}{c}
+2x + 3y = 16 \\ 
+3x + y = 17
+\end{array}
+\right 
+$$
+
+The reason why this system of polynomial equations might be difficult to solve is the presence of two unknowns $$x$$ and $$y$$ that seem to be intertwined.
+
 
 ### Varieties and ideals, dimensions
 
