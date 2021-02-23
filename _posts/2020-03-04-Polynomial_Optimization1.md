@@ -162,9 +162,9 @@ G
 (c^14 - 100*c^12 + 10579/3*c^10 - 170800/3*c^8 + 458787*c^6 - 5820100/3*c^4 + 9912673/3*c^2).factor()
 ```
 
-A bit scary, but notice how the final equation depends only one variable, c ! 
-The final step is achieving the factorization to solve an equation in c. We obtain 
-
+A bit scary, but notice how the final equation depends only on one variable, c ! 
+The final step is achieving the factorization to solve an equation in c. We obtain nine real solutions, but the one that works here is 
+$$ c = \sqrt(25 + 12 sqrt(3)) $$
 
 
 
