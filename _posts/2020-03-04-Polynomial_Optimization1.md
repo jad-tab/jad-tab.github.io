@@ -169,7 +169,7 @@ $$ c = \sqrt{25 + 12 \sqrt{3}}$$. Though the method is not very elegant, it has 
 * Replacing algebraic real numbers with their minimal polynomials to allow for exact computations (this means, in particular, that we would not be very happy to encounter transcendental numbers ... like 'pi' or 'e' !)
 * Introducing new variables to remove the radicals
 
-There's another trick that come in handy later on, that is the 'inequality bound' trick, that I will illustrate below.
+There's another trick that comes in handy later on, that is the 'inequality bound' trick, that I will illustrate below.
 
 #### A trick to formulate inequality bounds
 
@@ -177,7 +177,7 @@ Imagine we had some constraints on a given variable (like c), like:
 
 $$ c \leq 7 $$
 
-This means that there exists a real number $$k$$ such that $$c + k^2 = 7$$. So one way we could add an information constration would be to add an equation like that one to our system.
+This means that there exists a real number $$k$$ such that $$c + k^2 = 7$$. So one way we could add an information contraint would be to add an equation like that one to our system.
 One thing to keep in mind is that the less the variables, the better - for several reasons:
 * Less solution candidates to check
 * Less approximation errors due to high degree polynomials appearing (but that is not always the case) 
