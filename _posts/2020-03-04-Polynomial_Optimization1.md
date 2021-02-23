@@ -9,7 +9,11 @@ mathjax: "true"
 ---
 
 
+Polynomial functions are one of the first mathematical tools one encounters, and for good reason: they allow us to express elementary algebraic relationships between unknown quantities. 
+One might remember the quadratic formula that allows us to express exact solutions of a second degree polynomial $$P$$ of the form $$P(x) = ax^2 + bx + c$$ 
+$$x_{1, 2} = \frac{-b +- \sqrt{b^2 - 4ac}}{2a}$$ (of course, whenever real solutions exist).
 
+In this article, I would like to 
 ![alt]({{ site.url }}{{ site.baseurl }}/figures/guskooter.png)
 
  
