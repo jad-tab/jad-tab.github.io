@@ -126,11 +126,44 @@ $$\sqrt{(c/2 + 7/2)(c/2 + 7/2 - 3)(c/2 + 7/2 - 4)(c/2 + 7/2 - c)} \\ +
 \frac{\sqrt{3}}{4} c^2$$
 
 Since that equation is not polynomial, a nice way to fall back on our feet is by introducing $$u, v, w$$ the expressions of the areas of each small triangle. 
+One final step would be to add the equation  $$16x^2 - 3 = 0$$ and replace $$\frac{\sqrt{3}}{4}$$ by $$x$$ (the reason for this is a bit theoretical: to allow all computations to be done formally in $$Q$$).
+
 We therefore have the equivalent formulation of our problem: 
 
  $$\begin{cases}
-u + v + w = \frac{\sqrt{3}}{4} c^2 \\ u^2 = (c/2 + 7/2)(c/2 + 7/2 - 3)(c/2 + 7/2 - 4)(c/2 + 7/2 - c) \\v^2 = (c/2 + 4)(c/2 + 4 - 3)(c/2 + 4 - 5)(c/2 + 4 - c)\\ w^2 = (c/2 + 9/2)(c/2+9/2-4)(c/2 + 9/2 - 5)(c/2 + 9/2 - c)
+u + v + w = \frac{\sqrt{3}}{4} c^2 \\ u^2 = (c/2 + 7/2)(c/2 + 7/2 - 3)(c/2 + 7/2 - 4)(c/2 + 7/2 - c) \\v^2 = (c/2 + 4)(c/2 + 4 - 3)(c/2 + 4 - 5)(c/2 + 4 - c)\\ w^2 = (c/2 + 9/2)(c/2+9/2-4)(c/2 + 9/2 - 5)(c/2 + 9/2 - c) \\ 16x^2 - 3 = 0
 \end{cases}$$
+
+This system is quite difficult to solve as is, so we will use the untangling method described above via SageMath.
+I start by defining the variables and the polynomials that define an ideal of the polynomial ring $$Q[u,v,w,x,c]$$. I choose the lexicographic monomial ordering.
+
+```python
+var('c u v w x')
+
+p1 = u^2 - (c/2 + 7/2)*(c/2 + 7/2 - 3)*(c/2 + 7/2 - 4)*(c/2 + 7/2 - c)
+p2 = v^2 - (c/2 + 4)*(c/2 + 4 - 3)*(c/2 + 4 - 5)*(c/2 + 4 - c)
+p3 = w^2 - (c/2 + 9/2)*(c/2+9/2-4)*(c/2 + 9/2 - 5)*(c/2 + 9/2 - c)
+p4 = u + v + w - x*c^2
+p5 = 16*x^2 - 3
+
+
+K.<u,v,w,x,c> = PolynomialRing(QQ, 5, order='lex')
+I = (p1, p2, p3, p4,p5)*K
+```
+
+Then I compute a Groebner basis of I. It looks something like this:
+
+```python
+G = I.groebner_basis()
+G
+︡98f6e414-2b85-4999-803b-89bce93afa66︡{"stdout":"[u - 7/9*w - 961/31144824*x*c^12 + 30625/10381608*x*c^10 - 4488125/46717236*x*c^8 + 20959225/15572412*x*c^6 - 255681985/31144824*x*c^4 + 1897921153/93434472*x*c^2, v + 16/9*w + 961/31144824*x*c^12 - 30625/10381608*x*c^10 + 4488125/46717236*x*c^8 - 20959225/15572412*x*c^6 + 255681985/31144824*x*c^4 - 1991355625/93434472*x*c^2, w^2 + 1/16*c^4 - 41/8*c^2 + 81/16, w*c^2 + 137/3491712*x*c^12 - 703/166272*x*c^10 + 858253/5237568*x*c^8 - 1653347/581952*x*c^6 + 8027841/387968*x*c^4 - 595034393/10475136*x*c^2, x^2 - 3/16, c^14 - 100*c^12 + 10579/3*c^10 - 170800/3*c^8 + 458787*c^6 - 5820100/3*c^4 + 9912673/3*c^2]
+
+
+(c^14 - 100*c^12 + 10579/3*c^10 - 170800/3*c^8 + 458787*c^6 - 5820100/3*c^4 + 9912673/3*c^2).factor()
+```
+
+A bit scary, but notice how the final equation depends only one variable, c ! 
+The final step is achieving the factorization to solve an equation in c. We obtain 
 
 
 
@@ -156,8 +189,3 @@ u + v + w = \frac{\sqrt{3}}{4} c^2 \\ u^2 = (c/2 + 7/2)(c/2 + 7/2 - 3)(c/2 + 7/2
 
 
 
-
-
-```python
-
-```
