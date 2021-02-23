@@ -38,6 +38,7 @@ The aim of this 'Polynomial Optimization - Part I' article is therefore to:
 * Illustrate these tools by brute forcing two math Olympiad problems (I will be using the software SageMath for the computations)
 and last but not least:
 * Wonder how we could apply these tools to real-world, practical machine learning problems (in the next article, Polynomial Optimization - Part II !).
+* Taking away some 'tips' in formulating optimization problems 
 
 
 
@@ -156,19 +157,30 @@ Then I compute a Groebner basis of I. It looks something like this:
 ```python
 G = I.groebner_basis()
 G
-︡98f6e414-2b85-4999-803b-89bce93afa66︡{"stdout":"[u - 7/9*w - 961/31144824*x*c^12 + 30625/10381608*x*c^10 - 4488125/46717236*x*c^8 + 20959225/15572412*x*c^6 - 255681985/31144824*x*c^4 + 1897921153/93434472*x*c^2, v + 16/9*w + 961/31144824*x*c^12 - 30625/10381608*x*c^10 + 4488125/46717236*x*c^8 - 20959225/15572412*x*c^6 + 255681985/31144824*x*c^4 - 1991355625/93434472*x*c^2, w^2 + 1/16*c^4 - 41/8*c^2 + 81/16, w*c^2 + 137/3491712*x*c^12 - 703/166272*x*c^10 + 858253/5237568*x*c^8 - 1653347/581952*x*c^6 + 8027841/387968*x*c^4 - 595034393/10475136*x*c^2, x^2 - 3/16, c^14 - 100*c^12 + 10579/3*c^10 - 170800/3*c^8 + 458787*c^6 - 5820100/3*c^4 + 9912673/3*c^2]
+[u - 7/9*w - 961/31144824*x*c^12 + 30625/10381608*x*c^10 - 4488125/46717236*x*c^8 + 20959225/15572412*x*c^6 - 255681985/31144824*x*c^4 + 1897921153/93434472*x*c^2, v + 16/9*w + 961/31144824*x*c^12 - 30625/10381608*x*c^10 + 4488125/46717236*x*c^8 - 20959225/15572412*x*c^6 + 255681985/31144824*x*c^4 - 1991355625/93434472*x*c^2, w^2 + 1/16*c^4 - 41/8*c^2 + 81/16, w*c^2 + 137/3491712*x*c^12 - 703/166272*x*c^10 + 858253/5237568*x*c^8 - 1653347/581952*x*c^6 + 8027841/387968*x*c^4 - 595034393/10475136*x*c^2, x^2 - 3/16, c^14 - 100*c^12 + 10579/3*c^10 - 170800/3*c^8 + 458787*c^6 - 5820100/3*c^4 + 9912673/3*c^2]
 
-
-(c^14 - 100*c^12 + 10579/3*c^10 - 170800/3*c^8 + 458787*c^6 - 5820100/3*c^4 + 9912673/3*c^2).factor()
+G[-1].factor()
 ```
 
 A bit scary, but notice how the final equation depends only on one variable, c ! 
 The final step is achieving the factorization to solve an equation in c. We obtain nine real solutions, but the one that works here is 
-$$ c = \sqrt(25 + 12 \sqrt(3)) $$
+$$ c = \sqrt(25 + 12 \sqrt(3)) $$. Though the method is not very elegant, it has the merit of providing some good solution candidates that might work for a large class of problems. Of course, we had to make use of a few 'tricks':
 
+* Replacing algebraic real numbers with their minimal polynomials to allow for exact computations
+* Introducing new variables to remove the radicals
 
+There's another trick that we might also need later on, that is the 'inequality bound' trick, that I will illustrate below.
 
 #### A trick to formulate inequality bounds
+
+Imagine we had some constraints on a given variable (like c), like:
+
+$$ c \leq 7 $$
+
+This means that there exists a real number $$k$$ such that $$c + k^2 = 7$$. So one way we could add an information constration would be to add an equation like that one to our system.
+One thing to keep in mind is that the less the variables, the better - for several reasons:
+* Less solution candidates to check
+* Less approximation errors due to high degree polynomials appearing (but that is not always the case) 
 
 ### The system
 
