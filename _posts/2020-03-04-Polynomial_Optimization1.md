@@ -43,9 +43,9 @@ and last but not least:
 
 ## Multivariate polynomial theory (summary)
 
-### Analogy with abstract algebra and difficulties
+### Analogy with abstract algebra and differences
 
-### Varieties and ideals 
+### Varieties and ideals, dimensions
 
 
 
@@ -64,7 +64,11 @@ and last but not least:
 
 ## Next steps: ways to apply these tools to the real world ?
 
-## Bonus content: more clever solutions for the problems !
+
+
+
+## Bonus content: more subtle solutions for the problems !
+
 
 
 
