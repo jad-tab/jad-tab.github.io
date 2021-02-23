@@ -26,12 +26,10 @@ Or for some geometry problems for a start, like this one:
 ![alt]({{ site.url }}{{ site.baseurl }}/figures3/triangle.png)
 
 
-
 I would like to dedicate this article and the next one to the study of multivariate polynomials and to their applications in Data Science. Applying some ideas from the excellent book [Ideals, Varieties and Algorithms by Cox, Little and O'Shea](https://www.springer.com/gp/book/9783319167206), I'm first going to provide solutions to two sample problems by solving systems of multivariate polynomial equations, like this one:
 
 
 ![alt]({{ site.url }}{{ site.baseurl }}/figures3/system.png)
-
 
 The aim of this 'Polynomial Optimization - Part I' article is to:
 * Provide a very brief theoretical overview of the tools that can be used to solve multivariate polynomial systems
