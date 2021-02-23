@@ -38,8 +38,9 @@ The aim of this 'Polynomial Optimization - Part I' article is therefore to:
 * Illustrate these tools by brute forcing two math Olympiad problems (I will be using the software SageMath for the computations)
 and last but not least:
 * Wonder how we could apply these tools to real-world, practical machine learning problems (in the next article, Polynomial Optimization - Part II !).
-* Taking away some 'tips' in formulating optimization problems 
+* Taking away some 'tips' in formulating optimization problems.
 
+Summary:
 
 * This is
 {:toc}
