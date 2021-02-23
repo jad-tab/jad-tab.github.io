@@ -31,7 +31,7 @@ I would like to dedicate this article and the next one to the study of multivari
 
 ![alt]({{ site.url }}{{ site.baseurl }}/figures3/system.png)
 
-*Source: Mathematical Reflections - two wonderful years by Titu Andreescu*
+*Source: 'Mathematical Reflections - two wonderful years' by Titu Andreescu, Maxim Ignatiuc*
 
 The aim of this 'Polynomial Optimization - Part I' article is therefore to:
 * Provide a very brief theoretical overview of the tools that can be used to solve multivariate polynomial systems
