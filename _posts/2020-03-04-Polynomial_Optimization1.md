@@ -1,9 +1,9 @@
 ---
 title: "Polynomial Optimization - Part I"
 date: 2020-03-04
-tags: [optimization, polynomials, Groebner Bases]
+tags: [optimization, polynomials, Groebner Bases, SageMath]
 header:
-  teaser: "/figures/guskooter.png"
+  teaser: "/figures3/polynomials.png"
 excerpt: "Polynomial Optimization I: Solving multivariate polynomial systems. Why polynomials are cooler than I thought !"
 mathjax: "true"
 ---
@@ -18,15 +18,17 @@ $$x_{1, 2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
 
 The study of polynomials often stops here, for most people. In my undergraduate studies (in math), I don't remember giving polynomials much thought except when it came to abstract algebra (like Galois theory), or finding approximate roots to high degree polynomials (when a numerical approximation was sufficient, - hello Euler method !).
 
-Studying polynomials outside the realms of abstract algebra or numerical approximation methods seemed like an unpopular opinion for a very long time. After all, why would anyone bother with the study of polynomials if many models in physics or biology used more sophisticated weapons ?
+Studying polynomials outside the realms of abstract algebra or numerical approximation methods seemed like an unpopular opinion for a very long time. After all, why would anyone bother with the study of polynomials when many models in physics or biology use more sophisticated weapons, and when numerical methods allow us to compute whatever we wanted with any given precision.
 
-But what if polynomials had more to them than just that ? What if they could be of use in some practical real life problems?
+But what if polynomials had more to them than just that ? What if they could be of use in some practical machine learning problems?
 
-I would like to dedicate this article and the next one to the study of multivariate polynomials. Applying the ideas from the excellent book [Ideals, Varieties and Algorithms by Cox, Little and O'Shea](https://www.springer.com/gp/book/9783319167206), I'm going to provide a solution to a mock geometry problem  
-
-
+I would like to dedicate this article and the next one to the study of multivariate polynomials and to their applications. Applying the ideas from the excellent book [Ideals, Varieties and Algorithms by Cox, Little and O'Shea](https://www.springer.com/gp/book/9783319167206), I'm going to provide a solution to an elementary geometry problem by solving a system of multivariate polynomial equations.
 
 
+Therefore, the aim of this 'Polynomial Optimization - Part I' article is to:
+* Provide a very brief theoretical overview (the algebraic tools, and a few tricks) 
+* Illustrate these tools by brute forcing two elementary math Olympiad problems (using SageMath)
+* Wonder how we could extend these tools to practical machine learning problems (introducing polynomial optimization - Part II !).
 
 
 
