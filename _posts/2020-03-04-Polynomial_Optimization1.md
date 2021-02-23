@@ -20,7 +20,7 @@ The study of polynomials often stops here, for most people. In my undergraduate 
 
 Studying polynomials outside the realms of abstract algebra or numerical approximation methods seemed like an unpopular opinion for a very long time. After all, why would anyone bother with the study of polynomials when many models in physics or biology use more sophisticated weapons, and when numerical methods allow us to compute whatever we want with arbitrary precision.
 
-But what if polynomials had more to them than just that ? What if they could be of use in some practical problems, like finding the side of a triangle:
+But what if polynomials had more to them than just that ? What if they could be of use in some practical problems, in machine learning ? Or at least, problems like finding the sides of a room, given the distance of a person to its three vertices:
 
 ![alt]({{ site.url }}{{ site.baseurl }}/figures3/triangle.png)
 
@@ -43,7 +43,7 @@ and last but not least:
 
 ## Multivariate polynomial theory (summary)
 
-This section is my modest attempt to sketch and summarize a whole theory  - I apologize in advance to any algebraists who might not appreciate it. Please refer to the book above for more rigor and details.
+This section is my modest attempt at sketching and summarizing a whole theory  - I apologize in advance to any algebraists who might not appreciate it. Please refer to the book above for more rigor and details.
 
 ### Analogy with linear algebra and critical differences
 Let us consider the following system of equations:
