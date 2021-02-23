@@ -10,12 +10,18 @@ mathjax: "true"
 
 
 Polynomial functions are one of the first mathematical tools one encounters, and for good reason: they allow us to express elementary algebraic relationships between unknown quantities. 
-One might remember the quadratic formula that allows us to express exact solutions of a second degree polynomial $$P$$ of the form $$P(x) = ax^2 + bx + c$$ 
-$$x_{1, 2} = \frac{-b +- \sqrt{b^2 - 4ac}}{2a}$$ (of course, whenever real solutions exist).
+One might remember the quadratic formula that allows us to express exact solutions of a second degree polynomial $$P$$ of the form $$P(x) = ax^2 + bx + c$$:
 
-The study of polynomials often stops here, for the general students. In my undergraduate studies, I don't remember giving polynomials much thought except when it came to abstract algebra (like Galois theory), or finding approximate roots to high degree polynomials when a numerical approximation was sufficient.
+$$x_{1, 2} = \frac{-b +- \sqrt{b^2 - 4ac}}{2a}$$ 
 
-In this article, I would like to 
+(of course, whenever real solutions exist)
+
+The study of polynomials often stops here, for most people. In my undergraduate studies, I don't remember giving polynomials much thought except when it came to abstract algebra (like Galois theory), or finding approximate roots to high degree polynomials (when a numerical approximation was sufficient).
+
+But what if polynomials had something interesting to provide in Machine Learning ?
+
+
+
 ![alt]({{ site.url }}{{ site.baseurl }}/figures/guskooter.png)
 
  
