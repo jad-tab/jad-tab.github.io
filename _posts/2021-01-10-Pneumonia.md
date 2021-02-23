@@ -9,6 +9,7 @@ excerpt: "Building and deploying a convolutional neural network architecture to 
 mathjax: "true"
 ---
 
+
 Let's take a look at the following x-rays:
 
 ![alt]({{ site.url }}{{ site.baseurl }}/figures2/pneumvshealth.png)
