@@ -37,16 +37,20 @@ The aim of this 'Polynomial Optimization - Part I' article is therefore to:
 * Provide a very brief theoretical overview of the tools that can be used to solve multivariate polynomial systems
 * Illustrate these tools by brute forcing two math Olympiad problems (I will be using the software SageMath for the computations)
 and last but not least:
-* Wonder how we could apply these tools to practical machine learning problems (in the next article, Polynomial Optimization - Part II !).
+* Wonder how we could apply these tools to real-world, practical machine learning problems (in the next article, Polynomial Optimization - Part II !).
 
 
 
 ## Multivariate polynomial theory (summary)
 
 
+
+
 ## One-hit KO'ing these problems with multivariate polynomials
 
 ### The triangle 
+#### Putting into polynomial equations
+#### A trick to fake bounds
 
 ### The system
 
