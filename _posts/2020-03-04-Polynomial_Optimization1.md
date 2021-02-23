@@ -16,11 +16,10 @@ $$x_{1, 2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
 
 (of course, whenever real solutions exist)
 
-The study of polynomials often stops here, for most people. In my undergraduate studies, I don't remember giving polynomials much thought except when it came to abstract algebra (like Galois theory), or finding approximate roots to high degree polynomials (when a numerical approximation was sufficient).
+The study of polynomials often stops here, for most people. In my undergraduate studies (in math), I don't remember giving polynomials much thought except when it came to abstract algebra (like Galois theory), or finding approximate roots to high degree polynomials (when a numerical approximation was sufficient, - hello Euler method !).
+Studying polynomials outside the realms of abstract algebra or numerical approximation methods just seemed like an unpopular opinion to me, for a very long time.
 
-But what if polynomials had something interesting to provide in Machine Learning ?
-
-
+But what if polynomials had more to them than meets the eye ?
 
 ![alt]({{ site.url }}{{ site.baseurl }}/figures/guskooter.png)
 
