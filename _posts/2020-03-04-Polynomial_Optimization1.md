@@ -41,6 +41,8 @@ and last but not least:
 * Taking away some 'tips' in formulating optimization problems 
 
 
+* This is
+{:toc}
 
 ## Multivariate polynomial theory (summary)
 
