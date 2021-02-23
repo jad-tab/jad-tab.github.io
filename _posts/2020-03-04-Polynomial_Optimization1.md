@@ -20,13 +20,13 @@ The study of polynomials often stops here, for most people. In my undergraduate 
 
 Studying polynomials outside the realms of abstract algebra or numerical approximation methods seemed like an unpopular opinion for a very long time. After all, why would anyone bother with the study of polynomials when many models in physics or biology use more sophisticated weapons, and when numerical methods allow us to compute whatever we want with arbitrary precision.
 
-But what if polynomials had more to them than just that ? What if they could be of use in some practical problems ?
+But what if polynomials had more to them than just that ? What if they could be of use in some practical problems, like finding the side of a triangle:
 
 ![alt]({{ site.url }}{{ site.baseurl }}/figures3/triangle.png)
 
 *Source: Ireland National Olympiads (High School)*
 
-I would like to dedicate this article and the next one to the study of multivariate polynomials and to their applications in Data Science/Machine Learning. Applying some ideas from the excellent book [Ideals, Varieties and Algorithms by Cox, Little and O'Shea](https://www.springer.com/gp/book/9783319167206), I'm going to provide solutions to two sample problems by solving systems of multivariate polynomial equations, like this one:
+I would like to dedicate this article and the next one to the study of multivariate polynomials and to their applications in Data Science/Machine Learning. Applying some ideas from the excellent book [Ideals, Varieties and Algorithms by Cox, Little and O'Shea](https://www.springer.com/gp/book/9783319167206), I'm going to provide solutions to two sample problems by solving systems of multivariate polynomial equations, systems that look like this one:
 
 
 ![alt]({{ site.url }}{{ site.baseurl }}/figures3/system.png)
