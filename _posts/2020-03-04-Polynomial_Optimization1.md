@@ -112,9 +112,17 @@ $$ \sqrt{p(p-a)(p-b)(p-c)}= A $$
 
 For instance, the area of AMC is given by: 
 
-AMC = \sqrt{p(p - 3)(p - 4)(p - c)
+$$AMC = \sqrt{p(p - 3)(p - 4)(p - c)}$$
 
-where $$p = \frac{c + 7}{2}$$.
+where $$p = \frac{c + 7}{2}$$
+
+Doing the same for BMC and AMC, and setting the areas to be equal we obtain the following equation:
+
+$$\sqrt{(c/2 + 7/2)(c/2 + 7/2 - 3)(c/2 + 7/2 - 4)(c/2 + 7/2 - c)} + 
+\sqrt{(c/2 + 4)(c/2 + 4 - 3)(c/2 + 4 - 5)(c/2 + 4 - c)} + 
+\sqrt{(c/2 + 9/2)(c/2+9/2-4)(c/2 + 9/2 - 5)(c/2 + 9/2 - c)} =
+\sqrt{3}{4} c^2$$
+
 
 #### A trick to formulate inequality bounds
 
