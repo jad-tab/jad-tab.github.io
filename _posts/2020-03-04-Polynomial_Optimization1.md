@@ -61,7 +61,25 @@ $$\begin{cases}
   \end{cases}$$
 
 
-And that is not very difficult either to solve if we think of factoring the equations.
+The theory behind polynomials allows us to transform the above system of equations into the following, equivalent system:
+
+ $$\begin{cases}
+y^2 - \frac{x}{2} = 0 \\ xy = 0  \\ x^2 = 0
+\end{cases}$$
+
+Much easier right ! Namely, because the final equation only depends on $$x$$. That allows us to determine $$y$$ by substitution, just like in linear algebra.
+While it is quite difficult to expose a whole theory here, I'd like to briefly state the main challenges we encounter.
+
+
+* The ring $$\mathbb{K}[X_1, ..., X_n]$$ of multivariate polynomials is not a Euclidean domain (as opposed to $$\mathbb{K}[X]$$: it is less straightforward to define a 'polynomial division' which is critical)
+  
+* A system of multivariate polynomials can be interpreted as an ideal $$I$$ of the ring 
+  
+* A very valuable tool to find a "suitable" base of $$I$$: Groebner bases  (as in the system above, a suitable base is one which makes the system easier to solve)
+  
+* There exist some computational algorithms that can effectively transform any given system into another simpler one that is equivalent (Buchberger's algorithm) 
+
+
 
   
 ### Varieties and ideals, dimensions
