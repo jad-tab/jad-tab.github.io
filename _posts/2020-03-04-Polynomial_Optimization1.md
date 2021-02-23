@@ -71,18 +71,14 @@ Much easier right ! Namely, because the final equation only depends on $$x$$. Th
 While it is quite difficult to expose a whole theory here, I'd like to briefly state the main challenges we encounter.
 
 
-* The ring $$\mathbb{K}[X_1, ..., X_n]$$ of multivariate polynomials is not a Euclidean domain (as opposed to $$\mathbb{K}[X]$$: it is less straightforward to define a 'polynomial division' which is critical)
+* The ring $$\mathbb{K}[X_1, ..., X_n]$$ of multivariate polynomials is not a Euclidean domain (as opposed to $$\mathbb{K}[X]$$: it is less straightforward to define the critical notion of 'polynomial division')
   
-* A system of multivariate polynomials can be interpreted as an ideal $$I$$ of the ring 
+* A system of multivariate polynomials can be interpreted as an ideal $$I$$ of the ring of multivariate polynomials
   
-* A very valuable tool to find a "suitable" base of $$I$$: Groebner bases  (as in the system above, a suitable base is one which makes the system easier to solve)
+* A very valuable tool to find a "suitable" base of $$I$$: Groebner bases  (as in the system above, a suitable base is one that makes the system easier to solve)
   
 * There exist some computational algorithms that can effectively transform any given system into another simpler one that is equivalent (Buchberger's algorithm) 
 
-
-
-  
-### Varieties and ideals, dimensions
 
 
 
