@@ -3,7 +3,7 @@ title: "Building a good histogram estimator"
 date: 2020-11-17
 tags: [Statistics, Histogram, Estimators]
 header:
- image: 
+  teaser: "/figures/histogram.JPG" 
 excerpt: "Statistics, Histogram, Estimators"
 mathjax: "true"
 ---
