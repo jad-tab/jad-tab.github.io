@@ -48,23 +48,20 @@ This section is my modest attempt to sketch and summarize a whole theory  - I ap
 ### Analogy with linear algebra and critical differences
 Let us consider the following system of equations:
 
-$$
-\left\{ 
-\begin{array}{c}
-2x + 3y = 16 \\ 
-3x + y = 17
-\end{array}
-\right 
-$$
 
+$$\begin{cases}
+  2x + 3y = 16 \\ 3x + y = 17
+  \end{cases}$$
+  
 The reason why this system of polynomial equations might be difficult to solve is the presence of two unknowns $$x$$ and $$y$$ that are intertwined. A practical way to solve it would be to express $$y$$ in terms of $$x$$ in the second equation and plugging it into the first one. 
-While that is quite easy to do here, it seems to be more difficult with systems like:
+While that is quite easy to do here, it seems to be more difficult in the following case:
 
 $$\begin{cases}
   x^3 - 2xy = 0 \\ x^2y - 2y^2 + x = 0
   \end{cases}$$
 
 
+And that is not very difficult either to solve if we think of factoring the equations.
 
   
 ### Varieties and ideals, dimensions
