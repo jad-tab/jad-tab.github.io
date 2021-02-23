@@ -164,12 +164,12 @@ G[-1].factor()
 
 A bit scary, but notice how the final equation depends only on one variable, c ! 
 The final step is achieving the factorization to solve an equation in c. We obtain nine real solutions, but the one that works here is 
-$$ c = \sqrt(25 + 12 \sqrt(3)) $$. Though the method is not very elegant, it has the merit of providing some good solution candidates that might work for a large class of problems. Of course, we had to make use of a few 'tricks':
+$$ c = \sqrt{25 + 12 \sqrt{3}}$$. Though the method is not very elegant, it has the merit of providing some good solution candidates that might work for a large class of problems. Of course, we had to make use of a few 'tricks':
 
-* Replacing algebraic real numbers with their minimal polynomials to allow for exact computations
+* Replacing algebraic real numbers with their minimal polynomials to allow for exact computations (this means, in particular, that we would not be very happy to encounter transcendental numbers ... like 'pi' or 'e' !)
 * Introducing new variables to remove the radicals
 
-There's another trick that we might also need later on, that is the 'inequality bound' trick, that I will illustrate below.
+There's another trick that come in handy later on, that is the 'inequality bound' trick, that I will illustrate below.
 
 #### A trick to formulate inequality bounds
 
