@@ -228,9 +228,6 @@ and MM'B is a right triangle, this angle MM'B = 90
 By Al-Kashi, we have $$c^2 = 4^2 + 3^2 - 2*4*3*cos(90+60)$$
 So $$c = \sqrt{25 + 12 sqrt{3}}
 
-
-
-
 ### The System
 Setting $$x = 2 cos(t) $$ is a very clever trick to reduce the problem to a simple trigonometric equation with 125 solutions.
 
