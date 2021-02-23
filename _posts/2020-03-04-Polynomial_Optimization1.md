@@ -40,21 +40,23 @@ and last but not least:
 * Wonder how we could apply these tools to practical machine learning problems (in the next article, Polynomial Optimization - Part II !).
 
 
-## One-hit KO for two olympic problems
-
-### Solving difficult polynomial equations
-
-### Finding the side of an equilateral triangle 
-
-
 
 ## Multivariate polynomial theory (summary)
 
 
-## Problem solutions
+## One-hit KO'ing these problems with multivariate polynomials
+
+### The triangle 
+
+### The system
 
 
-### 
+
+## Next steps: finding ways to apply this theory
+
+## Bonus content: more subtle and clever solutions 
+
+
 
 
 
