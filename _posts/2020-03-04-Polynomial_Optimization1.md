@@ -57,9 +57,16 @@ $$
 \right 
 $$
 
-The reason why this system of polynomial equations might be difficult to solve is the presence of two unknowns $$x$$ and $$y$$ that seem to be intertwined.
+The reason why this system of polynomial equations might be difficult to solve is the presence of two unknowns $$x$$ and $$y$$ that are intertwined. A practical way to solve it would be to express $$y$$ in terms of $$x$$ in the second equation and plugging it into the first one. 
+While that is quite easy to do here, it seems to be more difficult with systems like:
+
+$$\begin{cases}
+  x^3 - 2xy = 0 \\ x^2y - 2y^2 + x = 0
+  \end{cases}$$
 
 
+
+  
 ### Varieties and ideals, dimensions
 
 
