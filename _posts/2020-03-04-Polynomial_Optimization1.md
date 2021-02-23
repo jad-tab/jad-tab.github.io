@@ -101,6 +101,8 @@ Five minutes ? Challenge accepted !
 
 #### Putting into polynomial equations
 
+So back to the triangle, a very fast (but not elegant) way is to 
+
 
 #### A trick to formulate inequality bounds
 
