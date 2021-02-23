@@ -79,12 +79,26 @@ While it is quite difficult to expose a whole theory here, I'd like to briefly s
   
 * There exist some computational algorithms that can effectively transform any given system into another simpler one that is equivalent (Buchberger's algorithm) 
 
+* Choosing the lexicographic monomial ordering is a good way to obtain the value of one of the unknowns in the system
+
+* Some systems can have an infinite number of solutions, or no solutions at all: that is the notion of a variety's dimensions - which is outside the scope of this article.
 
 
 
 ## One-hit KO'ing problems with multivariate polynomials
 
 ### The triangle 
+
+Consider the following equilateral triangle: 
+
+![alt]({{ site.url }}{{ site.baseurl }}/figures3/triangle.png)
+Given that MC = 3, MA = 4 and MB = 5, compute the side of the triangle. 
+
+Other variants of this problem exist, I've seen one [here](https://mindyourdecisions.com/blog/2019/09/19/area-of-the-square-puzzle-olympiad-practice/)
+
+
+
+
 
 #### Putting into polynomial equations
 
