@@ -101,15 +101,20 @@ Five minutes ? Challenge accepted !
 
 #### Putting into polynomial equations
 
-So back to the triangle, a very fast (but not very elegant way) is to write that the sum of the areas of the three inner triangles (AMC, AMB, BMC) is equal to the area of the whole equilateral triangle ABC. 
+So back to the triangle, a very fast (but not very elegant) way is to write that the sum of the areas of the three inner triangles (AMC, AMB, BMC) is equal to the area of the whole equilateral triangle ABC. 
 
 The area of the equilateral triangle with side $$c$$ is of course $$\frac{\sqrt{3}}{4} c^2 $$
 The areas of the small triangles can quickly be expressed using Heron's formula that links the sides and the area of any given triangle.
 
 For instance, if we denote by p the perimeter of a triangle (with sides a,b, and c) divided by two, and A its area, then we have:
 
-$$ \sqrt{p(p-a)(p-b)(p-c)} = A}$$
+$$ \sqrt{p(p-a)(p-b)(p-c)}= A $$
 
+For instance, the area of AMC is given by: 
+
+AMC = \sqrt{p(p - 3)(p - 4)(p - c)
+
+where $$p = \frac{c + 7}{2}$$.
 
 #### A trick to formulate inequality bounds
 
