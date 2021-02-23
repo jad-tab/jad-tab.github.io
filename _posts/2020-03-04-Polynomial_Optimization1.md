@@ -37,7 +37,5 @@ and last but not least:
 
 ```
 
-![alt]({{ site.url }}{{ site.baseurl }}/figures/algo1.PNG)
-
 
 ## Dropping some features, converting some others 
