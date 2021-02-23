@@ -116,7 +116,9 @@ $$AMC = \sqrt{p(p - 3)(p - 4)(p - c)}$$
 
 where $$p = \frac{c + 7}{2}$$
 
-Doing the same for BMC and AMC, and setting the areas to be equal we obtain the following equation:
+
+Let us denote by u the area of AMC, by v the area of BMC, and by w the area of AMB.
+Setting the areas to be equal we obtain the following equation:
 
 $$\sqrt{(c/2 + 7/2)(c/2 + 7/2 - 3)(c/2 + 7/2 - 4)(c/2 + 7/2 - c)} \\ + 
 \sqrt{(c/2 + 4)(c/2 + 4 - 3)(c/2 + 4 - 5)(c/2 + 4 - c)} \\ + 
