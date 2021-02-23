@@ -3,7 +3,7 @@ title: "Building a convolutional neural network to identify pneumonia"
 date: 2021-01-10
 tags: [Deep Learning, Classification, backpropagation, Keras, Medical Imaging]
 header:
- teaser: "figures2/pneumvshealth.png"
+  teaser: "figures2/pneumvshealth.png"
 excerpt: "Building and deploying a convolutional neural network architecture to classify patient chet x-ray scans (pneumonia vs. healthy) using an Amazon AWS GPU."
 mathjax: "true"
 ---
