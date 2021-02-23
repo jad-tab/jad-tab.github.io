@@ -20,9 +20,16 @@ The study of polynomials often stops here, for most people. In my undergraduate 
 
 Studying polynomials outside the realms of abstract algebra or numerical approximation methods seemed like an unpopular opinion for a very long time. After all, why would anyone bother with the study of polynomials when many models in physics or biology use more sophisticated weapons, and when numerical methods allow us to compute whatever we want with arbitrary precision.
 
-But what if polynomials had more to them than just that ? What if they could be of use in some practical machine learning problems?
+But what if polynomials had more to them than just that ? What if they could be of use in some practical machine learning problems ?
+
 
 I would like to dedicate this article and the next one to the study of multivariate polynomials and to their applications in Data Science. Applying some ideas from the excellent book [Ideals, Varieties and Algorithms by Cox, Little and O'Shea](https://www.springer.com/gp/book/9783319167206), I'm first going to provide solutions to two sample problems by solving systems of multivariate polynomial equations. 
+
+
+![alt]({{ site.url }}{{ site.baseurl }}/figures3/system.png)
+
+![alt]({{ site.url }}{{ site.baseurl }}/figures3/triangle.png)
+
 
 
 The aim of this 'Polynomial Optimization - Part I' article is to:
