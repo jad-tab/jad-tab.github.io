@@ -123,6 +123,18 @@ $$\sqrt{(c/2 + 7/2)(c/2 + 7/2 - 3)(c/2 + 7/2 - 4)(c/2 + 7/2 - c)} \\ +
 \sqrt{(c/2 + 9/2)(c/2+9/2-4)(c/2 + 9/2 - 5)(c/2 + 9/2 - c)}  \\ =
 \frac{\sqrt{3}}{4} c^2$$
 
+Since that equation is not polynomial, a nice way to fall back to the theory is by introducing $$u, v, w$$ the expressions of the areas of each small triangle. 
+We therefore have the equivalent formulation of our problem: 
+
+ $$\begin{cases}
+u + v + w = \frac{\sqrt{3}}{4} c^2
+u^2 = (c/2 + 7/2)(c/2 + 7/2 - 3)(c/2 + 7/2 - 4)(c/2 + 7/2 - c)
+v^2 = (c/2 + 4)(c/2 + 4 - 3)(c/2 + 4 - 5)(c/2 + 4 - c)
+w^2 = (c/2 + 9/2)(c/2+9/2-4)(c/2 + 9/2 - 5)(c/2 + 9/2 - c)
+\end{cases}$$
+
+
+
 
 #### A trick to formulate inequality bounds
 
