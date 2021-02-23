@@ -14,7 +14,7 @@ One might remember the quadratic formula that allows us to express exact solutio
 
 $$x_{1, 2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$ 
 
-(of course, whenever real solutions exist and $$a \neq 0 $$)
+(whenever real solutions exist and $$a \neq 0 $$)
 
 The study of polynomials often stops here, for most people. In my undergraduate studies (in math), I don't remember giving polynomials much thought except when it came to abstract algebra (like Galois theory), or finding approximate roots to high degree polynomials (when a numerical approximation was sufficient, - hello Euler methods).
 
