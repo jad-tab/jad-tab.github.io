@@ -26,8 +26,9 @@ I would like to dedicate this article and the next one to the study of multivari
 
 
 Therefore, the aim of this 'Polynomial Optimization - Part I' article is to:
-* Provide a very brief theoretical overview (the algebraic tools, and a few tricks) 
+* Provide a very brief theoretical overview 
 * Illustrate these tools by brute forcing two elementary math Olympiad problems (using SageMath)
+and last but not least:
 * Wonder how we could extend these tools to practical machine learning problems (this will be polynomial optimization - Part II !).
 
 
