@@ -92,13 +92,12 @@ While it is quite difficult to expose a whole theory here, I'd like to briefly s
 Consider the following equilateral triangle: 
 
 ![alt]({{ site.url }}{{ site.baseurl }}/figures3/triangle.png)
-Given that MC = 3, MA = 4 and MB = 5, compute the side of the triangle. 
+Given that MC = 3, MA = 4 and MB = 5, compute the side c of the triangle. 
 
-Other variants of this problem exist, I've seen one [here](https://mindyourdecisions.com/blog/2019/09/19/area-of-the-square-puzzle-olympiad-practice/)
+I've seen other variants of this problem, like the one [here](https://mindyourdecisions.com/blog/2019/09/19/area-of-the-square-puzzle-olympiad-practice/)
+![alt]({{ site.url }}{{ site.baseurl }}/figures3/polynomialmin.png)
 
-
-
-
+Five minutes ? Challenge accepted !
 
 #### Putting into polynomial equations
 
