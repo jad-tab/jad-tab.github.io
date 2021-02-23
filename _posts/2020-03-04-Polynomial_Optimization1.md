@@ -34,13 +34,23 @@ and last but not least:
 
 ## Two Problems, one solution
 
-### Solving in the real numbers 
+### Solving difficult polynomial equations
 
-### Finding the side of the equilateral triangle 
+### Finding the side of an equilateral triangle 
 
 
 
-## Two Problems, one solution
+## Multivariate polynomial theory (summary)
+
+
+## Problem solutions
+
+
+### 
+
+
+
+
 
 
 
