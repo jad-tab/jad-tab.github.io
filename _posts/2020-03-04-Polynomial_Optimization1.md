@@ -22,20 +22,29 @@ Studying polynomials outside the realms of abstract algebra or numerical approxi
 
 But what if polynomials had more to them than just that ? What if they could be of use in some practical machine learning problems?
 
-I would like to dedicate this article and the next one to the study of multivariate polynomials and to their applications in Data Science. Applying some ideas from the excellent book [Ideals, Varieties and Algorithms by Cox, Little and O'Shea](https://www.springer.com/gp/book/9783319167206), I'm going to provide a solutions to two sample problems by solving a system of multivariate polynomial equations.
+I would like to dedicate this article and the next one to the study of multivariate polynomials and to their applications in Data Science. Applying some ideas from the excellent book [Ideals, Varieties and Algorithms by Cox, Little and O'Shea](https://www.springer.com/gp/book/9783319167206), I'm first going to provide solutions to two sample problems by solving systems of multivariate polynomial equations. 
 
 
 The aim of this 'Polynomial Optimization - Part I' article is to:
 * Provide a very brief theoretical overview of the tools that can be used to solve multivariate polynomial systems
 * Illustrate these tools by brute forcing two math Olympiad problems (I will be using the software SageMath for the computations)
 and last but not least:
-* Wonder how we could apply these tools to practical machine learning problems (stay tuned for polynomial optimization - Part II !).
+* Wonder how we could apply these tools to practical machine learning problems (in the next article, Polynomial Optimization - Part II !).
+
+
+## Two Problems, one solution
+
+### Solving in the real numbers 
+
+### Finding the side of the equilateral triangle 
+
+
+
+## Two Problems, one solution
+
 
 
 
 ```python
 
 ```
-
-
-## Dropping some features, converting some others 
