@@ -118,10 +118,10 @@ where $$p = \frac{c + 7}{2}$$
 
 Doing the same for BMC and AMC, and setting the areas to be equal we obtain the following equation:
 
-$$\sqrt{(c/2 + 7/2)(c/2 + 7/2 - 3)(c/2 + 7/2 - 4)(c/2 + 7/2 - c)} + 
-\sqrt{(c/2 + 4)(c/2 + 4 - 3)(c/2 + 4 - 5)(c/2 + 4 - c)} + 
-\sqrt{(c/2 + 9/2)(c/2+9/2-4)(c/2 + 9/2 - 5)(c/2 + 9/2 - c)} =
-\sqrt{3}{4} c^2$$
+$$\sqrt{(c/2 + 7/2)(c/2 + 7/2 - 3)(c/2 + 7/2 - 4)(c/2 + 7/2 - c)} \\ + 
+\sqrt{(c/2 + 4)(c/2 + 4 - 3)(c/2 + 4 - 5)(c/2 + 4 - c)} \\ + 
+\sqrt{(c/2 + 9/2)(c/2+9/2-4)(c/2 + 9/2 - 5)(c/2 + 9/2 - c)}  \\ =
+\frac{\sqrt{3}}{4} c^2$$
 
 
 #### A trick to formulate inequality bounds
