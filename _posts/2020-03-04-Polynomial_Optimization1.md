@@ -4,7 +4,7 @@ date: 2020-03-04
 tags: [optimization, polynomials, Groebner Bases]
 header:
   teaser: "/figures/guskooter.png"
-excerpt: "Polynomial Optimization I: Solving multivariate polynomial systems"
+excerpt: "Polynomial Optimization I: Solving multivariate polynomial systems. Why polynomials are cooler than I thought !"
 mathjax: "true"
 ---
 
