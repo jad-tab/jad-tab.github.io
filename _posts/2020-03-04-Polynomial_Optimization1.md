@@ -164,7 +164,7 @@ G
 
 A bit scary, but notice how the final equation depends only on one variable, c ! 
 The final step is achieving the factorization to solve an equation in c. We obtain nine real solutions, but the one that works here is 
-$$ c = \sqrt(25 + 12 sqrt(3)) $$
+$$ c = \sqrt(25 + 12 \sqrt(3)) $$
 
 
 
