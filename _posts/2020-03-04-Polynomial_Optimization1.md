@@ -23,12 +23,14 @@ Studying polynomials outside the realms of abstract algebra or numerical approxi
 But what if polynomials had more to them than just that ? What if they could be of use in some practical problems ?
 
 ![alt]({{ site.url }}{{ site.baseurl }}/figures3/triangle.png)
+
 *Source: Ireland National Olympiads (High School)*
 
 I would like to dedicate this article and the next one to the study of multivariate polynomials and to their applications in Data Science/Machine Learning. Applying some ideas from the excellent book [Ideals, Varieties and Algorithms by Cox, Little and O'Shea](https://www.springer.com/gp/book/9783319167206), I'm going to provide solutions to two sample problems by solving systems of multivariate polynomial equations, like this one:
 
 
 ![alt]({{ site.url }}{{ site.baseurl }}/figures3/system.png)
+
 *Source: 'Mathematical Reflections - two wonderful years' by Titu Andreescu, Maxim Ignatiuc*
 
 The aim of this 'Polynomial Optimization - Part I' article is therefore to:
