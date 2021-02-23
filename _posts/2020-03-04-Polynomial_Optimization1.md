@@ -184,16 +184,55 @@ One thing to keep in mind is that the less the variables, the better - for sever
 
 ### The system
 
+Let us now go back to solving the system:
 
+$$\begin{cases}
+  x(x^4 - 5x^2 + 5) = y \\ y(y^4 - 5y^2 + 5) = z \\ z(z^4 - 5z^2 + 5) = x
+  \end{cases}$$
+  
+To untangle the equations, we can proceed in a similar way. 
+
+```python
+var('x y z')
+p1 = x*(x^4 - 5*x^2 + 5) - y
+p2 = y*(y^4 - 5*y^2 + 5) - z
+p3 = z*(z^4 - 5*z^2 + 5) - x
+
+A.<z,y,x> = PolynomialRing(QQ, 3, order ='lex')
+I = (p1,p2,p3)*A
+G = I.groebner_basis()
+G[-1].factor()
+```
+
+We obtain a polynomial of degree 125 in $$x$$ ! While that may arguably not be great news, that at least allows us to have a general idea. 
 
 ## Next steps: ways to apply these tools to the real world ?
 
+We have so far illustrated methods to solve any polynomial system of tangled equations. 
+One of the hardest steps so far might be seeing polynomial systems where there aren't any. So the next step would be to try and find a way to 'transform' a given optimization problem into a polynomial one 
+
+
+## Bonus content: the elegant solutions !
+
+As promised, here are some elegant solution hints to the above problems.
+
+### The Triangle
+Considering the 60 degree rotation centered at point A: point C is sent to point B and point M is rotated by 60 degrees.
+
+![alt]({{ site.url }}{{ site.baseurl }}/figures3/rotation.png)
+
+Since AM = AM' by construction and the angle between them is 60 degrees,
+we have that AMM' equilateral, so MM' = 4
+and MM'B is a right triangle, this angle MM'B = 90
+
+By Al-Kashi, we have $$c^2 = 4^2 + 3^2 - 2*4*3*cos(90+60)$$
+So $$c = \sqrt{25 + 12 sqrt{3}}
 
 
 
-## Bonus content: more subtle solutions for the problems !
 
-
+### The System
+Setting $$x = 2 cos(t) $$ is a very clever trick to reduce the problem to a simple trigonometric equation with 125 solutions.
 
 
 
