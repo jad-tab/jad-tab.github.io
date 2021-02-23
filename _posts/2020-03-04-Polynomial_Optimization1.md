@@ -22,7 +22,7 @@ Studying polynomials outside the realms of abstract algebra or numerical approxi
 
 But what if polynomials had more to them than just that ? What if they could be of use in some practical machine learning problems?
 
-I would like to dedicate this article and the next one to the study of multivariate polynomials and to their applications. Applying the ideas from the excellent book [Ideals, Varieties and Algorithms by Cox, Little and O'Shea](https://www.springer.com/gp/book/9783319167206), I'm going to provide a solution to an elementary geometry problem by solving a system of multivariate polynomial equations.
+I would like to dedicate this article and the next one to the study of multivariate polynomials and to their applications. Applying some ideas from the excellent book [Ideals, Varieties and Algorithms by Cox, Little and O'Shea](https://www.springer.com/gp/book/9783319167206), I'm going to provide a solution to an elementary geometry problem by solving a system of multivariate polynomial equations.
 
 
 Therefore, the aim of this 'Polynomial Optimization - Part I' article is to:
