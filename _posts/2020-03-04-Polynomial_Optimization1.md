@@ -43,22 +43,28 @@ and last but not least:
 
 ## Multivariate polynomial theory (summary)
 
+### Analogy with abstract algebra and difficulties
+
+### Varieties and ideals 
 
 
 
-## One-hit KO'ing these problems with multivariate polynomials
+## One-hit KO'ing problems with multivariate polynomials
 
 ### The triangle 
+
 #### Putting into polynomial equations
-#### A trick to fake bounds
+
+
+#### A trick to formulate inequality bounds
 
 ### The system
 
 
 
-## Next steps: finding ways to apply this theory
+## Next steps: ways to apply these tools to the real world ?
 
-## Bonus content: more subtle and clever solutions 
+## Bonus content: more clever solutions for the problems !
 
 
 
