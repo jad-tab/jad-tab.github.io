@@ -209,7 +209,7 @@ We obtain a polynomial of degree 125 in $$x$$ ! While that may arguably not be g
 ## Next steps: ways to apply these tools to the real world ?
 
 We have so far illustrated methods to solve any polynomial system of tangled equations. 
-One of the hardest steps so far might be seeing polynomial systems where there aren't any. So the next step would be to try and find a way to 'transform' a given optimization problem into a polynomial one 
+One of the hardest steps so far might be to see polynomial systems where there aren't any. So the next step would be to try and find a way to 'transform' a given optimization problem into a polynomial one. That will be the object of the article Polynomial Optimization - Part II: using approximation theory to approximate given smooth functions and use the methodology above.
 
 
 ## Bonus content: the elegant solutions !
