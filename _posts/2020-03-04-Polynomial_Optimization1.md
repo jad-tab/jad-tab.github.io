@@ -13,6 +13,8 @@ Polynomial functions are one of the first mathematical tools one encounters, and
 One might remember the quadratic formula that allows us to express exact solutions of a second degree polynomial $$P$$ of the form $$P(x) = ax^2 + bx + c$$ 
 $$x_{1, 2} = \frac{-b +- \sqrt{b^2 - 4ac}}{2a}$$ (of course, whenever real solutions exist).
 
+The study of polynomials often stops here, for the general students. In my undergraduate studies, I don't remember giving polynomials much thought except when it came to abstract algebra (like Galois theory), or finding approximate roots to high degree polynomials when a numerical approximation was sufficient.
+
 In this article, I would like to 
 ![alt]({{ site.url }}{{ site.baseurl }}/figures/guskooter.png)
 
