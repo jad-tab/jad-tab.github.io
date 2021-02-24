@@ -4,7 +4,7 @@ date: 2020-11-17
 tags: [Statistics, Histogram, Estimators]
 header:
   teaser: "/figures/histogram.JPG" 
-excerpt: "Exploring a statistical parametric estimator: using Birgé and Rozenholc's procedure to choose histograms"
+excerpt: "Exploring a statistical parametric estimator: using Birgé and Rozenholc's procedure for histograms"
 mathjax: "true"
 ---
 
