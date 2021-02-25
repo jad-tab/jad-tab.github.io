@@ -135,7 +135,7 @@ One final step would be to add the equation  $$16x^2 - 3 = 0$$ and replace $$\fr
 We therefore have the equivalent formulation of our problem: 
 
  $$\begin{cases}
-u + v + w = \frac{\sqrt{3}}{4} c^2 \\ u^2 = (c/2 + 7/2)(c/2 + 7/2 - 3)(c/2 + 7/2 - 4)(c/2 + 7/2 - c) \\v^2 = (c/2 + 4)(c/2 + 4 - 3)(c/2 + 4 - 5)(c/2 + 4 - c)\\ w^2 = (c/2 + 9/2)(c/2+9/2-4)(c/2 + 9/2 - 5)(c/2 + 9/2 - c) \\ 16x^2 - 3 = 0
+u + v + w = xc^2 \\ u^2 = (c/2 + 7/2)(c/2 + 7/2 - 3)(c/2 + 7/2 - 4)(c/2 + 7/2 - c) \\v^2 = (c/2 + 4)(c/2 + 4 - 3)(c/2 + 4 - 5)(c/2 + 4 - c)\\ w^2 = (c/2 + 9/2)(c/2+9/2-4)(c/2 + 9/2 - 5)(c/2 + 9/2 - c) \\ 16x^2 - 3 = 0
 \end{cases}$$
 
 This system is quite difficult to solve as is, so we will use the untangling method described above via SageMath.
@@ -229,7 +229,7 @@ we have that AMM' equilateral, so MM' = 4
 and MM'B is a right triangle, this angle MM'B = 90
 
 By Al-Kashi, we have $$c^2 = 4^2 + 3^2 - 2*4*3*cos(90+60)$$
-So $$c = \sqrt{25 + 12 sqrt{3}}$$
+So $$c = \sqrt{25 + 12 \sqrt{3}}$$
 
 ### The System
 Setting $$x = 2 cos(t) $$ is a very clever trick to reduce the problem to a simple trigonometric equation with 125 solutions.
